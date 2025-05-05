@@ -1,17 +1,16 @@
+// Import Swiper styles
+import "swiper/swiper-bundle.css";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import chair1 from "../../assets/png/1.png";
-import chair2 from "../../assets/png/2.png";
 import chair3 from "../../assets/png/3.png";
 import chair4 from "../../assets/png/4.png";
 import chair5 from "../../assets/png/5.png";
 import chair6 from "../../assets/png/6.png";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import "swiper/css/effect-fade";
 
 import "../../index.css";
 // import required modules
