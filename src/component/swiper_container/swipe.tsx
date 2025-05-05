@@ -17,7 +17,7 @@ import {
   Keyboard,
   EffectFade,
   Autoplay,
-} from "swiper/modules";
+} from "swiper";
 import SwiperContent from "./swiper_content";
 
 const Swipe: React.FC = () => {
