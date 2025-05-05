@@ -1,0 +1,289 @@
+.container{
+    height: 100px;
+    padding: 15px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobileMenu{
+    display: none;
+}
+.searchContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: 50vh;
+    padding: 0 10px;
+}
+.searchTwoContainer{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: 100vw;
+    padding: 0 10px;
+}
+.navMenu{
+    display: none;
+}
+.cartIconContainer{
+    display: none;
+}
+.container img{
+    width: 100px;
+}
+.searchIcon{
+    width: 25px;
+    height: 25px;
+    color: #000;
+}
+.subContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+@media screen and (max-width: 575.98px){
+    .container{
+        padding: 15px;
+        position: relative;
+    }
+    .overlayContainer{
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100dvw;
+        z-index: 2;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .mobileMenu{
+        padding: 30px 30px;
+        transition: transform 0.5s ease-in-out;
+        transform: translateX(0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 70dvw;
+        height: 100dvh;
+        background-color: white;
+        z-index: 10;
+    }
+    .mobileMenu ul{
+        background-color: transparent;
+        list-style-type: none;
+    }
+    .mobileMenu li{
+        margin: 25px 0px;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent;
+    }
+    .navMenu{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    .cartIconContainer{
+        display: block;
+    }
+    .cartIcon{
+        width: 30px;
+        height: 30px;
+    }
+    .subContainer{
+        display: none;
+    }
+    .searchTwoContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px;
+        margin: 5px 5px;
+        width: 98dvw;
+    }
+    .searchTwoContainer p{
+        color: grey;
+    }
+    .searchContainer{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .container{
+        padding: 15px;
+    }
+    .navMenu{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .cartIconContainer{
+        display: block;
+    }
+    .cartIcon{
+        width: 30px;
+        height: 30px;
+    }
+    .subContainer{
+        display: none;
+    }
+    .searchTwoContainer{
+        display: flex;
+        border-radius: 0px;
+        margin-top: 5px;
+    }
+    .searchTwoContainer p{
+        color: grey;
+    }
+    .searchContainer{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+     /*Tablet, Ipad Screens*/
+     .container{
+        padding: 15px;
+    }
+    .navMenu{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    .overlayContainer{
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100dvw;
+        z-index: 2;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .mobileMenu{
+        padding: 30px 30px;
+        transition: transform 0.5s ease-in-out;
+        transform: translateX(0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 40dvw;
+        height: 100dvh;
+        background-color: white;
+        z-index: 2;
+    }
+    .mobileMenu ul{
+        background-color: transparent;
+        list-style-type: none;
+    }
+    .mobileMenu li{
+        margin: 25px 0px;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent;
+    }
+    .cartIconContainer{
+        display: block;
+    }
+    .cartIcon{
+        width: 30px;
+        height: 30px;
+    }
+    .subContainer{
+        display: none;
+    }
+    .searchTwoContainer{
+        display: flex;
+        justify-content: center;
+        border-radius: 0px;
+        margin: 5px 10px;
+        width: 97dvw;
+    }
+    .searchTwoContainer p{
+        color: grey;
+    }
+    .searchContainer{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    /*Tablet, Ipad Screens -- PRO*/
+    .container{
+        padding: 15px;
+    }
+    .navMenu{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    .overlayContainer{
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100dvw;
+        z-index: 2;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .mobileMenu{
+        padding: 30px 30px;
+        transition: transform 0.5s ease-in-out;
+        transform: translateX(0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 40dvw;
+        height: 100dvh;
+        background-color: white;
+        z-index: 2;
+    }
+    .mobileMenu ul{
+        background-color: transparent;
+        list-style-type: none;
+    }
+    .mobileMenu li{
+        margin: 25px 0px;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent;
+    }
+    .cartIconContainer{
+        display: block;
+    }
+    .cartIcon{
+        width: 30px;
+        height: 30px;
+    }
+    .subContainer{
+        display: none;
+    }
+    .searchTwoContainer{
+        display: flex;
+        justify-content: center;
+        border-radius: 0px;
+        margin: 5px 10px;
+        width: 98dvw;
+    }
+    .searchTwoContainer p{
+        color: grey;
+    }
+    .searchContainer{
+        display: none;
+    }
+}

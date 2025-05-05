@@ -1,0 +1,9 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 500px;
+    color: grey;
+    margin-bottom: 10px;
+}

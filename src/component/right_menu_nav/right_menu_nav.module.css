@@ -1,0 +1,77 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+.divider{
+    border: 0.5px solid grey;
+    opacity: 0.2;
+    height: 30px;
+}
+.counterWrapper{
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    position: relative;
+}
+.counterWrapper span{
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: red;
+    font-size: 14px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    border-radius: 50px;
+}
+.emptyIcon{
+    color: grey;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 0px 10px;
+}
+.icon{
+    color: grey;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.emptyIcon:hover{
+    color: rgba(128, 128, 128, 0.71);
+}
+.icon:hover{
+    color: rgba(128, 128, 128, 0.71);
+}
+
+
+@media screen and (max-width: 575.98px){
+    .container{
+        display: none;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    /*Tablet, Ipad Screens*/
+    .container{
+        display: none;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    /*Tablet, Ipad Screens -- PRO*/
+    .container{
+        display: none;
+    }
+}

@@ -1,0 +1,24 @@
+@media screen and (max-width: 575.98px){
+    .wrapper{
+        display: none;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .wrapper{
+        display: none;    
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    /*Tablet, Ipad Screens*/
+    .wrapper{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+     /*Tablet, Ipad Screens -- PRO*/
+    .wrapper{
+        display: none;
+    }
+}
