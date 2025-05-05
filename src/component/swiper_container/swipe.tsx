@@ -8,10 +8,6 @@ import chair4 from "../../assets/png/4.png";
 import chair5 from "../../assets/png/5.png";
 import chair6 from "../../assets/png/6.png";
 
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/effect-fade";
-
 import "../../index.css";
 // import required modules
 import {
