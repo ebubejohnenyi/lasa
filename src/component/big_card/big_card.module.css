@@ -1,0 +1,141 @@
+.containerWrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    justify-content: center;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 650px;
+    height: fit-content;
+    padding: 0px 30px;
+    margin: 40px 0px;
+    background-color: #F6F6F6;
+}
+.big_card_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 650px;
+    height: fit-content;
+    padding: 30px;
+    margin: 40px 0px;
+    background-color: #F6F6F6;
+}
+.big_card_wrapper h1{
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 40px;
+    width: 400px;
+    margin: 15px 0px 30px 0px;
+}
+.big_card_wrapper h2{
+    font-weight: 400;
+    font-size: 20px;
+    background-color: transparent;
+}
+.big_card_wrapper img{
+    background-color: transparent;
+    object-fit: cover;
+    height: 580px;
+}
+.big_card_wrapper button{
+    color: red;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: transparent;
+}
+.wrapper h1{
+    font-size: 30px;
+    background-color: transparent;
+    margin: 30px 0px;
+}
+.wrapper h2{
+    font-weight: 300;
+    background-color: transparent;
+}
+.wrapper button{
+    background-color: transparent;
+    border: none;
+    color: red;
+}
+.wrapper img{
+    background-color: transparent;
+    object-fit: cover;
+    width: 300px;
+    height: 390px;
+}
+@media screen and (max-width: 575.98px){
+    .containerWrapper{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0px;
+    }
+    .big_card_wrapper{
+        width: 90dvw;
+        margin: 0px;
+        padding: 30px 0px;
+    }
+    .big_card_wrapper h1{
+        font-size: 20px;
+        width: 200px;
+    }
+    .big_card_wrapper img{
+        object-fit: cover;
+        width: 300px;
+        height: 400px;
+    }
+    .wrapper{
+        width: 90dvw;
+    }
+    .wrapper h1{
+        font-size: 20px;
+        background-color: transparent;
+        margin: 20px 0px;
+    }
+    .wrapper h2{
+        font-weight: 300;
+        background-color: transparent;
+    }
+    .wrapper img{
+        background-color: transparent;
+        object-fit: cover;
+        width: 100px;
+        height: 190px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    .containerWrapper{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0px;
+    }
+    .wrapper{
+        width: 90dvw;
+        margin: 10px 0px;
+    }
+    .big_card_wrapper{
+        width: 90dvw;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    .containerWrapper{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0px;
+    }
+    .wrapper{
+        width: 90dvw;
+        margin: 10px 0px;
+    }
+    .big_card_wrapper{
+        width: 90dvw;
+    }
+
+}

@@ -1,0 +1,42 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+    padding: 0px 10px;
+    border: 0.2px solid rgba(0, 0, 0, 0.145);
+}
+.wrapper h2{
+    width: 100px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.wrapper h2:hover{
+    color: red;
+}
+.wrapper img{
+    width: 90px;
+    height: 130px;
+    object-fit: contain;
+}
+@media screen and (max-width: 575.98px){
+    .wrapper{
+        width: 100%;
+        justify-content: center;
+        gap: 50px;
+    }
+    .wrapper h2{
+        width: 150px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    .wrapper{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    .wrapper{
+        width: 100%;
+    }
+}

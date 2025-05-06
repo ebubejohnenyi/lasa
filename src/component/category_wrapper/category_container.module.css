@@ -1,0 +1,26 @@
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+@media screen and (max-width: 575.98px){
+    .container{
+        display: grid;
+        grid-template-columns: auto;
+        width: 95dvw;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    .container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 95dvw;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    .container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 95dvw;
+    }
+}
