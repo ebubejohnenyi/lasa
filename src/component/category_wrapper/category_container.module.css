@@ -1,6 +1,7 @@
 .container{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+    width: 90dvw;
 }
 
 @media screen and (max-width: 575.98px){

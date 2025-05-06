@@ -1,0 +1,121 @@
+.productWrapper{
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 560px;
+}
+.productWrapper .hoverViewContainer{
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+.productWrapper .container{
+    opacity: 1;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+.productWrapper .overlayView{
+    background-color: rgba(0, 0, 0, 0.177);
+    position: absolute;
+    height: 400px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.subSelectOption{
+    position: absolute;
+    top: 330px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.hoverViewContainer:hover .productIconContainer {
+    opacity: 1;
+    transform: translateX(0);
+}
+.hoverViewContainer:hover .subSelectOption button{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.productIconContainer{
+    background-color: #F7F7F7;
+    padding: 20px;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.productIconContainer:hover{
+    background-color: red;
+    color: white;
+}
+.productIcons{
+    background-color: transparent;
+}
+.subSelectOption button{
+    color: white;
+    font-size: 15px;
+    background-color: red;
+    border: none;
+    font-weight: 600;
+    padding: 17px 15px;
+    margin: 10px 0px;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hoverViewContainer:hover{
+    opacity: 1;
+}
+.hoverViewContainer img{
+    height: 450px;
+    width: 350px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.hoverViewContainer h3{
+    margin-top: 10px;
+    color: rgb(49, 64, 26);
+    cursor: pointer;
+    transition: all 0.4 ease-in-out;
+}
+.hoverViewContainer h3:hover{
+    color: red;
+}
+.hoverViewContainer h1{
+    margin: 15px 0px;
+    font-size: 20px;
+    color: red;
+}
+
+.container img{
+    height: 450px;
+    width: 350px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.container h3{
+    color: rgb(49, 64, 26);
+    cursor: pointer;
+    transition: all 0.4 ease-in-out;
+}
+.container h3:hover{
+    color: red;
+}
+.container h1{
+    margin: 15px 0px;
+    font-size: 20px;
+    color: red;
+}
