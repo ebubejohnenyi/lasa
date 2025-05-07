@@ -1,7 +1,7 @@
 .productWrapper{
     position: relative;
     overflow: hidden;
-    width: 350px;
+    width: 320px;
     height: 560px;
 }
 .productWrapper .hoverViewContainer{
@@ -13,6 +13,7 @@
     opacity: 1;
     position: absolute;
     transition: opacity 0.3s ease;
+    background-color: transparent;
 }
 .productWrapper .overlayView{
     background-color: rgba(0, 0, 0, 0.177);
@@ -23,6 +24,13 @@
     right: 0;
     bottom: 0;
 }
+.topLeftContainer{
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
 .subSelectOption{
     position: absolute;
     top: 330px;
@@ -33,29 +41,26 @@
     z-index: 2;
     background-color: transparent;
 }
-
-.hoverViewContainer:hover .productIconContainer {
-    opacity: 1;
-    transform: translateX(0);
+.productIconWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: transparent;
 }
-.hoverViewContainer:hover .subSelectOption button{
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .productIconContainer{
     background-color: #F7F7F7;
     padding: 20px;
     border-radius: 100px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-
+    
     opacity: 0;
     transform: translateX(30px);
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .productIconContainer:hover{
-    background-color: red;
+    background-color: #C10000;
     color: white;
 }
 .productIcons{
@@ -64,7 +69,7 @@
 .subSelectOption button{
     color: white;
     font-size: 15px;
-    background-color: red;
+    background-color: #C10000;
     border: none;
     font-weight: 600;
     padding: 17px 15px;
@@ -76,12 +81,23 @@
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+.hoverViewContainer:hover .productIconContainer {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hoverViewContainer:hover .subSelectOption button{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .hoverViewContainer:hover{
     opacity: 1;
 }
+
 .hoverViewContainer img{
     height: 450px;
-    width: 350px;
+    width: 320px;
     object-fit: cover;
     margin-bottom: 10px;
 }
@@ -89,20 +105,20 @@
     margin-top: 10px;
     color: rgb(49, 64, 26);
     cursor: pointer;
-    transition: all 0.4 ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 .hoverViewContainer h3:hover{
-    color: red;
+    color: #C10000;
 }
 .hoverViewContainer h1{
     margin: 15px 0px;
     font-size: 20px;
-    color: red;
+    color: #C10000;
 }
 
 .container img{
     height: 450px;
-    width: 350px;
+    width: 320px;
     object-fit: cover;
     margin-bottom: 10px;
 }
@@ -112,10 +128,69 @@
     transition: all 0.4 ease-in-out;
 }
 .container h3:hover{
-    color: red;
+    color: #C10000;
 }
 .container h1{
     margin: 15px 0px;
     font-size: 20px;
-    color: red;
+    color: #C10000;
+}
+.addToCardBtn{
+    display: none;
+}
+.stars{
+    display: flex; 
+    align-items: center; 
+    margin: 15px 0px;
+}
+@media screen and (max-width: 575.98px){
+    .productWrapper{
+        width: 170px;
+        height: 340px;
+    }
+    .hoverViewContainer img{
+        height: 170px;
+        width: 200px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+    .container img{
+        height: 200px;
+        width: 170px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+    .subSelectOption{
+        display: none;
+    }
+    .hoverViewContainer:hover{
+        opacity: 0;
+    }
+    .container h3{
+        font-size: 15px;
+        width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .stars{
+        margin: 8px 0px;
+    }
+    .container h1{
+        margin: 5px 0px;
+        font-size: 15px;
+    }
+    .addToCardBtn{
+        display: block;
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 20px;
+        border: 2px solid #C10000;
+        color: #C10000;
+        outline: none;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
 }

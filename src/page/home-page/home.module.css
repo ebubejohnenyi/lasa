@@ -1,0 +1,12 @@
+.trendingWrapper{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+@media screen and (max-width: 575.98px){
+    .trendingWrapper{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+}
