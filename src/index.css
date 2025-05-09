@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: white;
-  /* border: 1px solid red; */
+  /* border: 1px solid blue; */
 }
 
 :root {
@@ -15,21 +15,21 @@
   font-weight: 400;
   font-style: normal;
 }
-.swiper {
+.customSwiper {
   width: 90dvw;
   height: 75dvh;
   padding: 50px;
   background-color: #F7F7F7;
 }
 
-.swiper-slide {
+.customSwiper .swiper-slide {
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.swiper-button-prev,
+.customSwiper .swiper-button-prev,
 .swiper-button-next {
   width: 30px;
   height: 30px;
@@ -37,58 +37,157 @@
   padding: 0px 30px;
 }
 
-.swiper-button-prev::after,
+.customSwiper .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 30px;
   color: grey;
 }
-.swiper-pagination {
+.customSwiper .swiper-pagination {
   background-color: transparent !important; /* Remove any background color */
 }
-.swiper-pagination-bullet-active {
+.customSwiper .swiper-pagination-bullet-active {
   background-color: grey !important; 
   width: 20px;
   border-radius: 10px;
   height: 8px;
 }
+
+.productCustomSwiper{
+  width: 100%;
+  height: auto;
+  padding: 50px;
+  position: relative;
+  padding: 0px 40px;
+}
+.productCustomSwiper .swiper-slide {
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.productCustomSwiper .swiper-button-prev{
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+}
+.productCustomSwiper
+.swiper-button-next {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+}
+
+.productCustomSwiper .swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 30px;
+  color: grey;
+}
+.productCustomSwiper .swiper-pagination {
+  display: none;
+}
+
 @media screen and (max-width: 575.98px){
-  .swiper-button-prev,
+  .customSwiper .swiper-button-prev,
   .swiper-button-next {
     display: none;
   }
-  .swiper {
+  .customSwiper {
     height: 57dvh;
     width: 100%;
     padding: 0px 30px;
   }
+  .productCustomSwiper{
+    display: none;
+  }
 }
 
 @media (max-width: 540px) and (max-height: 760px) {
-  .swiper {
+  .customSwiper {
     height: 70dvh;
     width: 100%;
     padding: 0px 30px;
   }
+  .productCustomSwiper{
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px){
-  .swiper {
+  .customSwiper {
     height: 40dvh;
     width: 100%;
     margin-top: 10px;
   }
-  .swiper-button-prev,  
+  .customSwiper .swiper-button-prev,  
   .swiper-button-next {
     padding: 0px 15px;
   }
 }
+
 @media screen and (min-width: 992px) and (max-width: 1199.98px){
-  .swiper {
+  .customSwiper {
     height: 35dvh;
     width: 100%;
     margin-top: 10px;
   }
-  .swiper-button-prev,  
+  .customSwiper .swiper-button-prev,  
   .swiper-button-next {
     padding: 0px 15px;
   }
+}
+
+
+/* Mobile - Small Phones (up to 320px) */
+@media (max-width: 320px) {
+  
+}
+
+/* Mobile - Medium Phones (up to 375px) */
+@media (max-width: 375px) {
+  
+}
+
+/* Mobile - Large Phones (up to 414px) */
+@media (max-width: 414px) {
+  
+}
+
+/* Mobile - Extra Large Phones (up to 480px) */
+@media (max-width: 480px) {
+ 
+}
+
+/* Tablets (up to 768px) */
+@media (max-width: 768px) {
+  
+}
+
+/* Small Laptops (up to 1024px) */
+@media (max-width: 1024px) {
+  
+}
+
+/* Medium Laptops (up to 1280px) */
+@media (max-width: 1280px) {
+  
+}
+
+/* Large Laptops (up to 1440px) */
+@media (max-width: 1440px) {
+ 
+}
+
+/* Desktops (up to 1600px) */
+@media (max-width: 1600px) {
+  
+}
+
+/* Ultra-Wide (up to 1920px) */
+@media (max-width: 1920px) {
+  
 }

@@ -24,6 +24,7 @@ const Swipe: React.FC = () => {
   return (
     <>
       <Swiper
+        className="customSwiper"
         effect="fade"
         fadeEffect={{ crossFade: true }} // Optional for smoother blend
         speed={1800}

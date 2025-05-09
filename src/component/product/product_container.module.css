@@ -143,20 +143,21 @@
     align-items: center; 
     margin: 15px 0px;
 }
+
 @media screen and (max-width: 575.98px){
     .productWrapper{
-        width: 170px;
+        width: 150px;
         height: 340px;
     }
     .hoverViewContainer img{
-        height: 170px;
+        height: 150px;
         width: 200px;
         object-fit: cover;
         margin-bottom: 10px;
     }
     .container img{
         height: 200px;
-        width: 170px;
+        width: 150px;
         object-fit: cover;
         margin-bottom: 10px;
     }
@@ -193,7 +194,8 @@
         text-transform: uppercase;
         margin-bottom: 5px;
     }
-}
+} 
+
 @media screen and (min-width: 768px) and (max-width: 991.98px){
     .productWrapper{
         width: 220px;
@@ -241,4 +243,4 @@
     .hoverViewContainer:hover{
         opacity: 0;
     }
-}
+} 
