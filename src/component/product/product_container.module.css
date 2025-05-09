@@ -144,22 +144,14 @@
     margin: 15px 0px;
 }
 
-@media screen and (max-width: 575.98px){
+@media screen and (max-width: 480px){
     .productWrapper{
-        width: 150px;
+        width: 45dvw;
         height: 340px;
     }
-    .hoverViewContainer img{
-        height: 150px;
-        width: 200px;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
     .container img{
+        width: 45dvw;
         height: 200px;
-        width: 150px;
-        object-fit: cover;
-        margin-bottom: 10px;
     }
     .subSelectOption{
         display: none;
@@ -169,7 +161,6 @@
     }
     .container h3{
         font-size: 15px;
-        width: 150px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -184,7 +175,7 @@
     .addToCardBtn{
         display: block;
         padding: 10px 20px;
-        width: 100%;
+        width: 45dvw;
         border-radius: 20px;
         border: 2px solid #C10000;
         color: #C10000;
@@ -195,52 +186,44 @@
         margin-bottom: 5px;
     }
 } 
-
-@media screen and (min-width: 768px) and (max-width: 991.98px){
+@media screen and (min-width: 481px) and (max-width: 991.98px) {
     .productWrapper{
-        width: 220px;
-        height: 360px;
-    }
-    .hoverViewContainer img{
-        width: 220px;
-        height: 250px;
-        object-fit: cover;
-        margin-bottom: 10px;
+        width: 45dvw;
+        height: 50dvh;
     }
     .container img{
-        width: 220px;
-        height: 250px;
-        object-fit: cover;
-        margin-bottom: 10px;
+        width: 45dvw;
+        height: 40dvh;
+    }
+    .hoverViewContainer img{
+        width: 45dvw;
+        height: 40dvh;
     }
     .subSelectOption{
-        display: none;
+        top: 28dvh;
     }
-    .hoverViewContainer:hover{
-        opacity: 0;
+    .productWrapper .overlayView{
+        height: 40dvh;
     }
 }
+
 @media screen and (min-width: 992px) and (max-width: 1199.98px){
     .productWrapper{
-        width: 220px;
-        height: 360px;
-    }
-    .hoverViewContainer img{
-        width: 220px;
-        height: 250px;
-        object-fit: cover;
-        margin-bottom: 10px;
+        width: 45dvw;
+        height: 60dvh;
     }
     .container img{
-        width: 220px;
-        height: 250px;
-        object-fit: cover;
-        margin-bottom: 10px;
+        width: 45dvw;
+        height: 40dvh;
+    }
+    .hoverViewContainer img{
+        width: 45dvw;
+        height: 40dvh;
     }
     .subSelectOption{
-        display: none;
+        top: 31dvh;
     }
-    .hoverViewContainer:hover{
-        opacity: 0;
+    .productWrapper .overlayView{
+        height: 40dvh;
     }
 } 

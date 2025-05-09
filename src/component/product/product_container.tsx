@@ -71,6 +71,7 @@ const ProductContainer: React.FC<{
             <h2
               style={{
                 backgroundColor: "#CC0000",
+                width: "fit-content",
                 letterSpacing: "2px",
                 color: "white",
                 fontSize: "13px",

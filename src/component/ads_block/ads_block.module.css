@@ -5,8 +5,9 @@
     background-color: antiquewhite;
     height: 150px;
     overflow: hidden;
-    width: 90dvw;
+    width: 90%;
     gap: 20px;
+    padding: 0 10px;
 }
 .container h1{
     font-size: 80px;
@@ -27,7 +28,7 @@
     font-weight: 400;
     color: rgb(49, 64, 26);
 }
-@media screen and (max-width: 575.98px){
+@media screen and (max-width: 480px){
     .container{
         margin-top: 15px;
         width: 90dvw;
@@ -48,13 +49,7 @@
         object-fit: cover;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 991.98px){
-    .container{
-        margin-top: 15px;
-        width: 90dvw;
-        gap: 5px;
-        padding: 0px 10px;
-    }
+@media screen and (min-width: 481px) and (max-width: 991.98px){
     .container h1{
         font-size: 50px;
     }
@@ -66,7 +61,23 @@
         font-size: 15px;
     }
     .container img{
-        width: 200px;
+        width: 40dvw;
         object-fit: cover;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    .container h1{
+        font-size: 50px;
+    }
+    .container h2{
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .container p{
+        font-size: 15px;
+    }
+    .container img{
+        object-fit: cover;
+        width: 40dvw;
     }
 }

@@ -4,17 +4,18 @@
     gap: 20px;
 }
 
-@media screen and (max-width: 575.98px){
+@media screen and (max-width: 480px){
     .trendingWrapper{
         display: grid;
         grid-template-columns: auto auto;
         gap: 15px;
+        width: 100%;
+        margin: 0px 10px;
+        justify-content: center;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 991.98px){
-    .trendingWrapper{
+@media screen and (min-width: 481px) and (max-width: 991.98px) {
+    .trendingWrapper {
         display: none;
-        grid-template-columns: auto auto auto;
-        gap: 20px;
     }
 }
