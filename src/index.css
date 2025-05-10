@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   background-color: white;
-  /* border: 1px solid blue; */
 }
 
 :root {
@@ -103,7 +102,7 @@
     display: none;
   }
   .customSwiper {
-    height: 75vh;
+    height: 90vh;
     width: 100%;
     padding: 20px 30px;
   }

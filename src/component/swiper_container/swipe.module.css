@@ -65,8 +65,8 @@
         align-items: center;
         flex-direction: column;
         width: 100vw;
-        height: auto;
-        padding: 270px 0 0 0;
+        height: 80vh;
+        padding: 160px 0 0 0;
     }
     .contentWrapper{
         width: 300px;
@@ -96,7 +96,7 @@
     .productImage{
         object-fit: contain;
         width: 400px;
-        height: 300px;
+        height: 400px;
     }
     .productImage img{
         width: 100%;
