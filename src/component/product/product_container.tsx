@@ -16,7 +16,7 @@ const ProductContainer: React.FC<{
   if (props.newProduct) {
     content = "NEW";
   } else if (props.sale) {
-    content = "SALE";
+    content = props.sale;
   }
   return (
     <div className={cssClass.productWrapper}>

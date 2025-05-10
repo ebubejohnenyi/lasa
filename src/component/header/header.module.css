@@ -7,6 +7,16 @@
 }
 .mobileMenu{
     display: none;
+    padding: 30px 30px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70dvw;
+    height: 100dvh;
+    background-color: white;
+    z-index: 10;
 }
 .searchContainer{
     display: flex;
@@ -46,35 +56,25 @@
     align-items: center;
     margin: 10px 0px;
 }
+.overlayContainer{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100dvw;
+    z-index: 2;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
-@media screen and (max-width: 575.98px){
+@media screen and (max-width: 480px){
     .container{
         padding: 15px;
         position: relative;
     }
-    .overlayContainer{
-        background-color: rgba(0, 0, 0, 0.4);
-        width: 100dvw;
-        z-index: 2;
-        height: 100dvh;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
     .mobileMenu{
-        padding: 30px 30px;
-        transition: transform 0.5s ease-in-out;
-        transform: translateX(0);
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 70dvw;
-        height: 100dvh;
-        background-color: white;
-        z-index: 10;
+       display: block;
     }
     .mobileMenu ul{
         background-color: transparent;
@@ -117,7 +117,10 @@
     }
 }
 
-@media screen and (min-width: 576px) and (max-width: 767.98px){
+@media screen and (min-width: 481px) and (max-width: 991.98px){
+    .mobileMenu{
+        display: block;
+     }
     .container{
         padding: 15px;
     }
@@ -139,73 +142,6 @@
     }
     .searchTwoContainer{
         display: flex;
-        border-radius: 0px;
-        margin-top: 5px;
-    }
-    .searchTwoContainer p{
-        color: grey;
-    }
-    .searchContainer{
-        display: none;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991.98px){
-     /*Tablet, Ipad Screens*/
-     .container{
-        padding: 15px;
-    }
-    .navMenu{
-        display: block;
-        width: 30px;
-        height: 30px;
-    }
-    .overlayContainer{
-        background-color: rgba(0, 0, 0, 0.4);
-        width: 100dvw;
-        z-index: 2;
-        height: 100dvh;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-    .mobileMenu{
-        padding: 30px 30px;
-        transition: transform 0.5s ease-in-out;
-        transform: translateX(0);
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 40dvw;
-        height: 100dvh;
-        background-color: white;
-        z-index: 2;
-    }
-    .mobileMenu ul{
-        background-color: transparent;
-        list-style-type: none;
-    }
-    .mobileMenu li{
-        margin: 25px 0px;
-        font-weight: 700;
-        font-size: 20px;
-        background-color: transparent;
-    }
-    .cartIconContainer{
-        display: block;
-    }
-    .cartIcon{
-        width: 30px;
-        height: 30px;
-    }
-    .subContainer{
-        display: none;
-    }
-    .searchTwoContainer{
-        display: flex;
         justify-content: center;
         border-radius: 0px;
         margin: 5px 10px;
@@ -216,11 +152,23 @@
     }
     .searchContainer{
         display: none;
+    } 
+    .mobileMenu ul{
+        background-color: transparent;
+        list-style-type: none;
+    }
+    .mobileMenu li{
+        margin: 25px 0px;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent;
     }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px){
-    /*Tablet, Ipad Screens -- PRO*/
+    .mobileMenu{
+        display: block;
+     }
     .container{
         padding: 15px;
     }
@@ -229,40 +177,7 @@
         width: 30px;
         height: 30px;
     }
-    .overlayContainer{
-        background-color: rgba(0, 0, 0, 0.4);
-        width: 100dvw;
-        z-index: 2;
-        height: 100dvh;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-    .mobileMenu{
-        padding: 30px 30px;
-        transition: transform 0.5s ease-in-out;
-        transform: translateX(0);
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 40dvw;
-        height: 100dvh;
-        background-color: white;
-        z-index: 2;
-    }
-    .mobileMenu ul{
-        background-color: transparent;
-        list-style-type: none;
-    }
-    .mobileMenu li{
-        margin: 25px 0px;
-        font-weight: 700;
-        font-size: 20px;
-        background-color: transparent;
-    }
+    
     .cartIconContainer{
         display: block;
     }
@@ -285,5 +200,15 @@
     }
     .searchContainer{
         display: none;
+    } 
+    .mobileMenu ul{
+        background-color: transparent;
+        list-style-type: none;
+    }
+    .mobileMenu li{
+        margin: 25px 0px;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent;
     }
 }

@@ -1,42 +1,95 @@
 .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: antiquewhite;
+    align-content: center;
+    background-image: url('../../assets/jpg/2.jpg');
+    background-position: center;
+    background-size: cover;
     height: 150px;
-    overflow: hidden;
     width: 90%;
-    gap: 20px;
-    padding: 0 10px;
+    margin: 20px 0;
 }
 .container h1{
-    font-size: 80px;
+    font-size: 40px;
     font-weight: 700;
-    color: rgb(49, 64, 26);
+    color: white;
     background-color: transparent;
 }
-.container h2{
-    color: rgb(49, 64, 26);
-    font-size: 40px;
-    font-weight: 500;
+.container h3{
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
     background-color: transparent;
-    margin: 3px 0px;
 }
 .container p{
     background-color: transparent;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
-    color: rgb(49, 64, 26);
+    color: white;
+}
+.container img{
+    width: 400px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+.container2{
+    display: block;
+    align-content: center;
+    background-image: url('../../assets/jpg/bulb6.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 90%;
+    margin: 20px 10px;
+}
+.container2 h1{
+    font-size: 40px;
+    width: 450px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+}
+.container2 h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+    width: 450px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+}
+.container2 button{
+    background-color: #C10000;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px 40px;
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.contentContainer2{
+    background-color: transparent;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+.contentContainer{
+    background-color: transparent;
+    gap: 10px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
 }
 @media screen and (max-width: 480px){
-    .container{
-        margin-top: 15px;
-        width: 90dvw;
-        gap: 5px;
-        padding: 0px 10px;
+    .contentContainer{
+        margin: 0;
     }
     .container h1{
-        font-size: 30px;
+        font-size: 20px;
     }
     .container h2{
         font-size: 20px;
@@ -48,14 +101,31 @@
         width: 150px;
         object-fit: cover;
     }
+    
+    .container2 h1{
+        width: 200px;
+        font-size: 25px;
+    }
+    .container2 h3{
+        font-size: 15px;
+        width: 100%;
+    }
+    .contentContainer2{
+        width: 100%;
+        margin: 0;
+    }
+    .container2 button{
+        font-size: 15px;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
 }
 @media screen and (min-width: 481px) and (max-width: 991.98px){
-    .container h1{
-        font-size: 50px;
+    .contentContainer{
+        margin: 0;
     }
-    .container h2{
-        font-weight: 600;
-        font-size: 20px;
+    .container h1{
+        font-size: 30px;
     }
     .container p{
         font-size: 15px;
@@ -63,6 +133,23 @@
     .container img{
         width: 40dvw;
         object-fit: cover;
+    }
+    .container2 h1{
+        width: 400px;
+        font-size: 40px;
+    }
+    .container2 h3{
+        font-size: 20px;
+        width: 100%;
+    }
+    .contentContainer2{
+        width: 100%;
+        margin: 0;
+    }
+    .container2 button{
+        font-size: 15px;
+        padding: 10px 20px;
+        margin-top: 20px;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1199.98px){

@@ -23,7 +23,10 @@ const Header: React.FC = () => {
           className={cssClasses.navMenu}
           onClick={handleMobileMenuView}
         />
-        <TextInputWrapper className={cssClasses.searchContainer}>
+        <TextInputWrapper
+          className={cssClasses.searchContainer}
+          hint="Search in 20,000+ products"
+        >
           <CiSearch className={cssClasses.searchIcon} />
         </TextInputWrapper>
         <img src={logo} alt="Logo" />
@@ -65,7 +68,10 @@ const Header: React.FC = () => {
           <MenuNav title="Contact Us" />
         </MenuWrapper>
       </section>
-      <TextInputWrapper className={cssClasses.searchTwoContainer}>
+      <TextInputWrapper
+        className={cssClasses.searchTwoContainer}
+        hint="Search in 20,000+ products"
+      >
         <p>All</p>
       </TextInputWrapper>
     </>

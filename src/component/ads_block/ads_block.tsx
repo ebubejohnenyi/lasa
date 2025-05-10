@@ -1,23 +1,37 @@
-import cssClasses from "./ads_block.module.css";
-import chair1 from "../../assets/png/14.png";
+import FilledButton from "../button/filledButton";
 
-const AdsBlock = () => {
+const AdsBlock: React.FC<{
+  title: string;
+  description?: string;
+  buttonName?: string;
+  imgPath?: string;
+  firstHeaderTitle?: string;
+  headerTitle?: string;
+  code?: string;
+  className: string;
+  secondaryClassName?: string;
+}> = (props) => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <section className={cssClasses.container}>
-        <h1>10%</h1>
-        <div style={{ backgroundColor: "transparent" }}>
-          <h2>Get more pay less</h2>
-          <p>
-            On orders $500 + use coupon code:{" "}
-            <strong style={{ backgroundColor: "transparent" }}>LASA2025</strong>
-          </p>
+      <section className={props.className}>
+        <div className={props.secondaryClassName}>
+          {props.firstHeaderTitle && <h3>{props.firstHeaderTitle}</h3>}
+          {props.headerTitle && <h3>{props.headerTitle}</h3>}
+          <div style={{ backgroundColor: "transparent" }}>
+            <h1>{props.title}</h1>
+            <p>
+              {props.description}
+              {props.code && (
+                <strong
+                  style={{ backgroundColor: "transparent", marginLeft: "5px" }}
+                >
+                  {props.code}
+                </strong>
+              )}
+            </p>
+          </div>
+          {props.buttonName && <FilledButton name={props.buttonName!} />}
         </div>
-        <img
-          src={chair1}
-          alt="Image"
-          style={{ backgroundColor: "transparent" }}
-        />
       </section>
     </div>
   );

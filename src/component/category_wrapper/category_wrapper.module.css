@@ -9,3 +9,34 @@
     font-weight: 700;
     margin: 40px 0px;
 }
+.subNavigation{
+    width: 100%;
+    padding: 40px 0 40px 40px;
+}
+.subNavigation ul{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.subNavigation ul li{
+    cursor: pointer;
+    margin: 0px 10px;
+    font-size: 27px;
+    font-weight: 700;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+.subNavigation ul li:hover{
+    border-bottom: 5px solid #C10000;
+}
+@media screen and (max-width: 480px){
+    .subNavigation{
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .subNavigation ul li{
+        font-size: 17px;
+    }
+}

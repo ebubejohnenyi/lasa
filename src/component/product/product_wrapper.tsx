@@ -12,10 +12,19 @@ import { Pagination, Navigation } from "swiper";
 import { SwiperSlide } from "swiper/react";
 
 import cssClasses from "./product_wrapper.module.css";
+import * as React from "react";
 
-const ProductWrapper = () => {
+const ProductWrapper: React.FC<{
+  title?: string;
+  nav1?: string;
+  nav2?: string;
+}> = (props) => {
   return (
-    <CategoryWrapper title="Trending Items">
+    <CategoryWrapper
+      title={props.title}
+      navTitle1={props.nav1}
+      navTitle2={props.nav2}
+    >
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -29,7 +38,7 @@ const ProductWrapper = () => {
           320: { slidesPerView: 1, spaceBetween: 20 },
           375: { slidesPerView: 1, spaceBetween: 20 },
           414: { slidesPerView: 1, spaceBetween: 20 },
-          480: { slidesPerView: 2, spaceBetween: 20 },
+          480: { slidesPerView: 1, spaceBetween: 20 },
           640: { slidesPerView: 2, spaceBetween: 20 },
           768: { slidesPerView: 2, spaceBetween: 30 },
           820: { slidesPerView: 2, spaceBetween: 30 },
@@ -68,6 +77,7 @@ const ProductWrapper = () => {
         </SwiperSlide>
         <SwiperSlide>
           <ProductContainer
+            featuredProduct="FEATURED"
             img={chair4}
             productName="Joler secieved elbraew"
             price="$290 - $350"

@@ -1,0 +1,91 @@
+.container{
+    width: 95%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.container h3{
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.container h1{
+    color: #C10000;
+    font-weight: 700;
+    font-size: 23px;
+}
+.lastFooter{
+    width: 95%;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(128, 128, 128, 0.332);
+    margin-top: 40px;
+    padding: 25px 0;
+}
+.lastFooter ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.lastFooter ul li{
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.lastFooter ul li:hover{
+    color: #C10000;
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .container > div{
+        margin: 15px 0;
+    }
+    .lastFooter{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .lastFooter ul{
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 991.98px) {
+    .container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .container > div{
+        margin: 15px 0;
+    }
+    .lastFooter{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .lastFooter ul{
+        margin-top: 15px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    .container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .container > div{
+        margin: 15px 0;
+    }
+}
