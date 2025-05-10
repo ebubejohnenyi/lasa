@@ -75,6 +75,7 @@
     }
     .mobileMenu{
        display: block;
+       position: fixed;
     }
     .mobileMenu ul{
         background-color: transparent;
@@ -120,6 +121,7 @@
 @media screen and (min-width: 481px) and (max-width: 991.98px){
     .mobileMenu{
         display: block;
+        position: fixed;
      }
     .container{
         padding: 15px;
@@ -168,6 +170,7 @@
 @media screen and (min-width: 992px) and (max-width: 1199.98px){
     .mobileMenu{
         display: block;
+        position: fixed;
      }
     .container{
         padding: 15px;
