@@ -103,9 +103,9 @@
     display: none;
   }
   .customSwiper {
-    height: 57dvh;
+    height: 75vh;
     width: 100%;
-    padding: 0px 30px;
+    padding: 20px 30px;
   }
   .productCustomSwiper{
     display: none;
@@ -114,9 +114,10 @@
 
 @media screen and  (min-width: 481px) and (max-width: 991.98px) {
   .customSwiper {
-    height: 40dvh;
+    height: 35%;
     width: 100%;
     padding: 0px 30px;
+    margin-top: 20%;
   }
   .productCustomSwiper{
     display: block;
@@ -125,9 +126,9 @@
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px){
   .customSwiper {
-    height: 70dvh;
+    height: 40dvh;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 10%;
   }
   .customSwiper .swiper-button-prev,  
   .swiper-button-next {

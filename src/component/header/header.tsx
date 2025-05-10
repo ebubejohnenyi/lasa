@@ -8,7 +8,7 @@ import MenuNav from "../menu_nav/menu_nav";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoBasketOutline, IoCloseOutline } from "react-icons/io5";
 import CounterWrapper from "../right_menu_nav/counter_wrapper";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Header: React.FC = () => {
   const [viewMobileMenu, setViewMobileMenu] = useState(false);
@@ -17,22 +17,8 @@ const Header: React.FC = () => {
     setViewMobileMenu(() => !viewMobileMenu);
   }
 
-  useEffect(() => {
-    if (viewMobileMenu) {
-      // Disable scrolling when menu is open
-      document.body.style.overflow = "hidden";
-    } else {
-      // Re-enable scrolling when menu is closed
-      document.body.style.overflow = "";
-    }
-
-    // Clean up on component unmount
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [viewMobileMenu]);
   return (
-    <>
+    <div className={cssClasses.headerContainer}>
       <section className={cssClasses.container}>
         <RxHamburgerMenu
           className={cssClasses.navMenu}
@@ -89,7 +75,7 @@ const Header: React.FC = () => {
       >
         <p>All</p>
       </TextInputWrapper>
-    </>
+    </div>
   );
 };
 

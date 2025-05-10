@@ -5,8 +5,8 @@
     justify-content: space-between;
     background-color: #F7F7F7;
     text-align: start;
-    height: 100%;
-    width: 100dvw;
+    height: auto;
+    width: 100%;
 }
 .contentWrapper{
     background-color: transparent;
@@ -59,10 +59,14 @@
     object-position: center;
     object-fit: cover;
 }
-@media screen and (max-width: 575.98px){
+@media screen and (max-width: 480px){
     .swipeContent{
         display: flex;
+        align-items: center;
         flex-direction: column;
+        width: 100vw;
+        height: auto;
+        padding: 270px 0 0 0;
     }
     .contentWrapper{
         width: 300px;
@@ -90,8 +94,9 @@
         font-size: 13px;
     }
     .productImage{
-        /* background-color: red; */
-        width: 300px;
+        object-fit: contain;
+        width: 400px;
+        height: 300px;
     }
     .productImage img{
         width: 100%;
@@ -100,52 +105,56 @@
         object-fit: contain;
     } 
   }
-  @media (max-width: 540px) and (max-height: 720px) {
+  @media (min-width: 481px) and (max-width: 991.98px) {
     .swipeContent{
         display: flex;
-        height: 100%;
-    }
-    .contentWrapper{
-        width: 300px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+        gap: 50px;
         justify-content: center;
         align-items: center;
+        margin: 0;
+        padding: 0 40px;
+    }
+    .contentWrapper{
+        width: 100%;
+        max-width: 200px;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
     }
     .swipeContent h1{
         font-size: 15px;
+        font-weight: 500;
     }
-    .h2{
-        font-size: 20px;
-        width: 250px;
+    .swipeContent h2{
+        font-size: 15px;
+        width: 100%;
+        max-width: 200px;
     }
     .swipeContent p{
-        width: 250px;
         font-size: 15px;
+        width: 200px;
         font-weight: 500;
-        margin: 10px 0px;
+        margin: 10px 0;
     }
-    .swipeContent button{
+    .swipeContent button {
+        color: red;
         font-size: 13px;
-        font-weight: 100;
     }
     .productImage{
-        margin-bottom: 70px;
-        width: 300px;
+        width: 100%;
+        max-width: 400px;
     }
     .productImage img{
         width: 100%;
-        height: 320px;
+        max-width: 400px;
+        height: 400px;
         object-position: center;
-        object-fit: cover;
-    }
+        object-fit: contain;
+    } 
   }
-  @media screen and (min-width: 768px) and (max-width: 991.98px){
-    .swipeContent{
-        width: 100dvw;
-        padding: 50px;
-    }
+  @media screen and (min-width: 992px) and (max-width: 1199.98px){
     .contentWrapper{
         width: 300px;
         text-align: start;
@@ -159,8 +168,8 @@
         font-weight: 500;
     }
     .h2{
-        font-size: 20px;
-        width: 200px;
+        font-size: 40px;
+        width: 300px;
     }
     .swipeContent p{
         font-size: 15px;
@@ -182,35 +191,3 @@
         object-fit: cover;
     }
   }
-  @media screen and (min-width: 992px) and (max-width: 1199.98px){
-    .swipeContent{
-        width: 100%;
-        padding: 20px;
-    }
-    .productImage{
-        display: inline-block;
-        margin-bottom: 70px;
-    }
-    .productImage img{
-        width: 100%;
-        height: 500px;
-        object-position: center;
-        object-fit: cover;
-    }
-    .swipeContent h1{
-        font-size: 15px;
-        font-weight: 500;
-    }
-    .h2{
-        font-size: 25px;
-        width: 300px;
-    }
-    .swipeContent p{
-        font-size: 15px;
-        font-weight: 500;
-    }
-    .swipeContent button {
-        color: red;
-        font-size: 13px;
-    }
-}
