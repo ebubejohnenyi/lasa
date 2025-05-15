@@ -43,7 +43,7 @@ const ProductWrapper: React.FC<{
           768: { slidesPerView: 2, spaceBetween: 30 },
           820: { slidesPerView: 2, spaceBetween: 30 },
           1024: { slidesPerView: 2, spaceBetween: 30 },
-          1280: { slidesPerView: 4, spaceBetween: 30 },
+          1280: { slidesPerView: 3, spaceBetween: 30 },
           1440: { slidesPerView: 4, spaceBetween: 30 },
           1600: { slidesPerView: 4, spaceBetween: 30 },
           1920: { slidesPerView: 4, spaceBetween: 30 },

@@ -3,12 +3,13 @@
     grid-template-columns: auto auto;
     gap: 50px;
     justify-content: center;
+    width: 100%;
 }
 .wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 670px;
+    width: 50dvw;
     height: fit-content;
     padding: 0px 30px;
     margin: 40px 0px;
@@ -20,7 +21,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    width: 670px;
+    width: 40dvw;
     height: fit-content;
     padding: 30px;
     margin: 40px 0px;
@@ -142,3 +143,12 @@
     }
 
 }
+
+/* @media screen and (min-width: 1200px){
+    .containerWrapper{
+        background-color: blue;
+    }
+    .wrapper{
+        background-color: red;
+    }
+} */
