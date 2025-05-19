@@ -4,7 +4,7 @@ const AdsBlock: React.FC<{
   title: string;
   description?: string;
   buttonName?: string;
-  imgPath?: string;
+  // imgPath?: string;
   firstHeaderTitle?: string;
   headerTitle?: string;
   code?: string;

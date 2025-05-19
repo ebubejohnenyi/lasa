@@ -1,0 +1,40 @@
+.shopContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border-top: 1px solid rgba(128, 128, 128, 0.216);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.216);
+    padding: 2rem 0;
+    margin: 2rem 2.5rem;
+}
+.shopContainer h1{
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sortWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+    gap: 20px;
+}
+.sortWrapper h1{
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sortContainer{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.sortContainer h1{
+    font-size: 20px;
+    background-color: transparent;
+    font-weight: 500;
+}

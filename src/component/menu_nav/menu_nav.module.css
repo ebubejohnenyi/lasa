@@ -1,7 +1,13 @@
-.li{
+.listWrapper{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-.li:hover{
+
+.listWrapper .active{
     color: red;
+}
+
+.listWrapper a{
+    text-decoration: none;
+    color: black;
 }

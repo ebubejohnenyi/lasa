@@ -10,18 +10,19 @@
     height: 30px;
 }
 .counterWrapper{
-    width: 55px;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 55px;
+    padding: 0 1rem;
     position: relative;
 }
 .counterWrapper span{
     top: 0;
     right: 0;
     position: absolute;
-    background-color: red;
+    background-color: #CC0000;
     font-size: 14px;
     height: 25px;
     width: 25px;

@@ -1,17 +1,13 @@
 import AdsBlock from "../../component/ads_block/ads_block";
 import BigCardWrapper from "../../component/big_card/big_card_wrapper";
 import CategoryContainer from "../../component/category_wrapper/category_container";
-import Header from "../../component/header/header";
 import ProductWrapper from "../../component/product/product_wrapper";
 import Swipe from "../../component/swiper_container/swipe";
 import cssClasses from "../../component/ads_block/ads_block.module.css";
-import NewsLetter from "../../component/newsletter/newsletter";
-import Footer from "../../component/footer/footer";
 
 const Home: React.FC = () => {
   return (
     <>
-      <Header />
       <Swipe />
       <CategoryContainer />
       <BigCardWrapper />
@@ -32,11 +28,6 @@ const Home: React.FC = () => {
         buttonName="Shop Now"
       />
       <ProductWrapper nav1="BEST SELLERS" nav2="NEWEST PRODUCTS" />
-      <NewsLetter
-        title="Get Discount 20% Off"
-        description="Subscribe our newsletter and get discount 20% off"
-      />
-      <Footer />
     </>
   );
 };

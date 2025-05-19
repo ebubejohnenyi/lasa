@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.wrapper h3{
+    font-weight: 500;
+    color: gray
+}
+.totalCheck{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.totalCheck input{
+    width: 13px;
+    height: 13px;
+    transform: scale(1.5);
+    cursor: pointer;
+}

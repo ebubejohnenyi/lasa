@@ -1,0 +1,11 @@
+.wrapper{
+    height: fit-content;
+    margin: 2rem 0;
+}
+.wrapper h1{
+    padding: 0 0 2rem 0;
+    font-size: 25px;
+    font-weight: 800;
+    color: #3a454F;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.258);
+}

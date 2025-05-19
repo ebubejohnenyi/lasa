@@ -1,8 +1,20 @@
 import Home from "./page/home-page/home";
-import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootNavigation from "./page/root-page/root_nav";
+import ShopPage from "./page/shop/shop_page";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootNavigation />,
+    children: [
+      { path: "", element: <Home /> },
+      { path: "shop-page", element: <ShopPage /> },
+    ],
+  },
+]);
 function App() {
-  return <Home />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;

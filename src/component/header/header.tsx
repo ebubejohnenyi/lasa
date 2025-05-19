@@ -1,14 +1,14 @@
-import cssClasses from "./header.module.css";
-import TextInputWrapper from "../input/text_input_wrapper";
-import { CiSearch } from "react-icons/ci";
-import RightMenuNav from "../right_menu_nav/right_menu_nav";
-import logo from "../../assets/png/logo.png";
-import MenuWrapper from "../menu_nav/menu_wrapper";
-import MenuNav from "../menu_nav/menu_nav";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { IoBasketOutline, IoCloseOutline } from "react-icons/io5";
-import CounterWrapper from "../right_menu_nav/counter_wrapper";
 import { useState } from "react";
+import { CiSearch } from "react-icons/ci";
+import { IoBasketOutline, IoCloseOutline } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
+import TextInputWrapper from "../input/text_input_wrapper";
+import MenuNav from "../menu_nav/menu_nav";
+import MenuWrapper from "../menu_nav/menu_wrapper";
+import CounterWrapper from "../right_menu_nav/counter_wrapper";
+import RightMenuNav from "../right_menu_nav/right_menu_nav";
+import cssClasses from "./header.module.css";
+import logo from "../../assets/png/logo.png";
 
 const Header: React.FC = () => {
   const [viewMobileMenu, setViewMobileMenu] = useState(false);
@@ -51,22 +51,22 @@ const Header: React.FC = () => {
               }}
             />
             <ul>
-              <MenuNav title="Home" />
-              <MenuNav title="Shop" />
-              <MenuNav title="Gallery" />
-              <MenuNav title="Blog" />
-              <MenuNav title="Contact Us" />
+              <MenuNav navPath="/" title="Home" />
+              <MenuNav navPath="shop-page" title="Shop" />
+              <MenuNav navPath="gallery-page" title="Gallery" />
+              <MenuNav navPath="blog-page" title="Blog" />
+              <MenuNav navPath="contact-page" title="Contact Us" />
             </ul>
           </div>
         </>
       )}
       <section className={cssClasses.subContainer}>
         <MenuWrapper>
-          <MenuNav title="Home" />
-          <MenuNav title="Shop" />
-          <MenuNav title="Gallery" />
-          <MenuNav title="Blog" />
-          <MenuNav title="Contact Us" />
+          <MenuNav navPath="/" title="Home" />
+          <MenuNav navPath="shop-page" title="Shop" />
+          <MenuNav navPath="gallery-page" title="Gallery" />
+          <MenuNav navPath="blog-page" title="Blog" />
+          <MenuNav navPath="contact-page" title="Contact Us" />
         </MenuWrapper>
       </section>
       <TextInputWrapper

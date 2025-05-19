@@ -96,6 +96,34 @@
   display: none;
 }
 
+.shopCardSwiper{
+  height: 40vh;
+  width: 100%;
+  margin: 8rem 0;
+}
+.shopCardSwiper .swiper-slide {
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.productCustomSwiper .swiper-button-prev {
+  position: absolute;
+  left: 0;
+}
+.productCustomSwiper .swiper-button-next {
+  position: absolute;
+  right: 0;
+}
+
+.shopCardSwiper .swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 25px;
+  color: grey;
+}
+
+
 @media screen and (max-width: 480px){
   .customSwiper .swiper-button-prev,
   .swiper-button-next {
@@ -121,6 +149,9 @@
   .productCustomSwiper{
     display: block;
   }
+  .shopCardSwiper{
+    margin: 5rem 0;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px){
@@ -132,5 +163,11 @@
   .customSwiper .swiper-button-prev,  
   .swiper-button-next {
     padding: 0px 15px;
-  } 
+  }
+   
+}
+ @media screen and (min-width: 1200px){
+    .shopCardSwiper{
+      margin: 1rem 0;
+    }
 }
