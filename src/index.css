@@ -137,6 +137,9 @@
   .productCustomSwiper{
     display: none;
   }
+  .shopCardSwiper{
+    margin: 8rem 0 0 0;
+  }
 }
 
 @media screen and  (min-width: 481px) and (max-width: 991.98px) {
@@ -150,8 +153,11 @@
     display: block;
   }
   .shopCardSwiper{
-    margin: 5rem 0;
+    margin: 10rem 0 0 0;
   }
+  .shopCardSwiper{
+    height: 25vh;
+   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px){
@@ -164,7 +170,10 @@
   .swiper-button-next {
     padding: 0px 15px;
   }
-   
+   .shopCardSwiper{
+    background-color: blue;
+    padding: 100px;
+   }
 }
  @media screen and (min-width: 1200px){
     .shopCardSwiper{

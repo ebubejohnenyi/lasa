@@ -79,17 +79,58 @@
 }
 
 @media screen and (max-width: 480px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: auto;
+    }
     .sideContent{
         display: none;
+    }
+    .trendingWrapper{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
     }
 }
 @media screen and (min-width: 481px) and (max-width: 991.98px){
+     .wrapper{
+        display: grid;
+        grid-template-columns: auto;
+    }
     .sideContent{
         display: none;
     }
+    .trendingWrapper{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+    }
 }
 @media screen and (min-width: 992px) and (max-width: 1199.98px){
+     .wrapper{
+        display: grid;
+        grid-template-columns: auto;
+    }
     .sideContent{
         display: none;
+    }
+    .trendingWrapper{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+    }
+}
+ @media screen and (min-width: 1200px){
+    .trendingWrapper{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 100%;
+    }
+    .sideContent{
+        width: 250px;
+    }
+    .adsContainer h1{
+        width: fit-content;
+        font-size: 30px;
     }
 }
