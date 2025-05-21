@@ -53,9 +53,9 @@ const Header: React.FC = () => {
             <ul>
               <MenuNav navPath="/" title="Home" />
               <MenuNav navPath="shop-page" title="Shop" />
-              <MenuNav navPath="gallery-page" title="Gallery" />
-              <MenuNav navPath="blog-page" title="Blog" />
-              <MenuNav navPath="contact-page" title="Contact Us" />
+              <MenuNav navPath="shop-page" title="Gallery" />
+              <MenuNav navPath="shop-page" title="Blog" />
+              <MenuNav navPath="shop-page" title="Contact Us" />
             </ul>
           </div>
         </>
@@ -63,10 +63,10 @@ const Header: React.FC = () => {
       <section className={cssClasses.subContainer}>
         <MenuWrapper>
           <MenuNav navPath="/" title="Home" />
-          <MenuNav navPath="shop-page" title="Shop" />
-          <MenuNav navPath="gallery-page" title="Gallery" />
-          <MenuNav navPath="blog-page" title="Blog" />
-          <MenuNav navPath="contact-page" title="Contact Us" />
+          <MenuNav navPath="/shop-page" title="Shop" />
+          <MenuNav navPath="/shop-page" title="Gallery" />
+          <MenuNav navPath="/shop-page" title="Blog" />
+          <MenuNav navPath="/shop-page" title="Contact Us" />
         </MenuWrapper>
       </section>
       <TextInputWrapper
