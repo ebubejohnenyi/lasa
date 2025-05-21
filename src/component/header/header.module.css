@@ -245,3 +245,12 @@
         background-color: transparent;
     }
 }
+@media screen and (min-width: 1200px){
+    /* .headerContainer{
+        background-color: red;
+    } */
+     .container{
+        width: 100%;
+        padding: 10px;
+     }
+}
