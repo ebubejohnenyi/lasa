@@ -5,16 +5,17 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 const HeaderNavigationContainer: React.FC<{
   title: string;
   currentPageTitle: string;
+  customClassName?: string;
 }> = (props) => {
   return (
-    <section className={cssClasses.container}>
+    <section className={props.customClassName ?? cssClasses.container}>
       <div className={cssClasses.headerContent}>
         <h1>
           <NavLink to="/">{props.title}</NavLink>
         </h1>
         <MdOutlineKeyboardArrowRight
           size={25}
-          color="white"
+          color="rgba(146, 146, 146, 0.99)"
           style={{ backgroundColor: "transparent" }}
         />
         <h1>{props.currentPageTitle}</h1>

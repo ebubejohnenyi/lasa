@@ -3,6 +3,7 @@
     grid-template-columns: auto auto;
     justify-content: center;
     gap: 20px;
+    padding: 0rem 2rem;
 }
 .trendingWrapper{
     display: grid;
@@ -10,11 +11,11 @@
     gap: 20px;
 }
 .sideContent{
-    width: 400px;
+    width: 100%;
 }
-.content{
+/* .content{
     background-color: red;
-}
+} */
 .adsContainer{
     height: 600px;
     width: 100%;
@@ -126,9 +127,7 @@
         grid-template-columns: auto auto auto;
         width: 100%;
     }
-    .sideContent{
-        width: 240px;
-    }
+    
     .adsContainer h1{
         width: fit-content;
         font-size: 30px;

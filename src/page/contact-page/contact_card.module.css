@@ -1,0 +1,8 @@
+.wrapper h2{
+    font-size: 20px;
+    margin: 1rem 0rem;
+}
+.wrapper p{
+    color: rgba(0, 0, 0, 0.564);
+    font-size: 18px;
+}
