@@ -17,3 +17,41 @@
 .container h1{
     color: rgba(0, 0, 0, 0.564);
 }
+.galleryWrapper{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    margin: 5rem 0;
+}
+.galleryWrapper img{
+    width: 30vw;
+    height: 80vh;
+    object-fit: cover;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        display: none;
+    }
+    .galleryWrapper{
+        margin: 1rem 0;
+        grid-template-columns: auto ;
+    }
+    .galleryWrapper img{
+        width: 90vw;
+    }
+    .wrapper{
+        margin-top: 40%;
+    }
+}
+
+@media screen and  (min-width: 481px) and (max-width: 991.98px){
+    .galleryWrapper{
+        margin: 1rem 0;
+        grid-template-columns: auto auto;
+    }
+    .galleryWrapper img{
+        width: 45vw;
+    }
+}
