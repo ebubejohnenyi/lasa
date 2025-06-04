@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { IoBasketOutline, IoCloseOutline } from "react-icons/io5";
+import { IoBasketOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import TextInputWrapper from "../input/text_input_wrapper";
 import MenuNav from "../menu_nav/menu_nav";
 import MenuWrapper from "../menu_nav/menu_wrapper";
 import CounterWrapper from "../right_menu_nav/counter_wrapper";
-import RightMenuNav from "../right_menu_nav/right_menu_nav";
+import TopRightMenuNav from "../right_menu_nav/top_right_menu_nav";
 import cssClasses from "./header.module.css";
 import logo from "../../assets/png/logo.png";
+import MobileDrawer from "../mobile_menu/mobile_drawer";
 
 const Header: React.FC = () => {
   const [viewMobileMenu, setViewMobileMenu] = useState(false);
@@ -31,41 +32,24 @@ const Header: React.FC = () => {
           <CiSearch className={cssClasses.searchIcon} />
         </TextInputWrapper>
         <img src={logo} alt="Logo" />
-        <RightMenuNav />
+        <TopRightMenuNav />
         <div className={cssClasses.cartIconContainer}>
-          <CounterWrapper count="0">
+          <CounterWrapper
+            counterWrapperClass={cssClasses.counterWrapper}
+            count={0}
+          >
             <IoBasketOutline className={cssClasses.cartIcon} />
           </CounterWrapper>
         </div>
       </section>
       {viewMobileMenu && (
-        <>
-          <div className={cssClasses.overlayContainer}></div>
-          <div className={cssClasses.mobileMenu}>
-            <IoCloseOutline
-              onClick={handleMobileMenuView}
-              style={{
-                backgroundColor: "transparent",
-                width: "40px",
-                height: "40px",
-              }}
-            />
-            <ul>
-              <MenuNav navPath="/" title="Home" />
-              <MenuNav navPath="shop" title="Shop" />
-              <MenuNav navPath="gallery" title="Gallery" />
-              <MenuNav navPath="shop-page" title="Blog" />
-              <MenuNav navPath="contact-us" title="Contact Us" />
-            </ul>
-          </div>
-        </>
+        <MobileDrawer onMobileMenuView={handleMobileMenuView} />
       )}
       <section className={cssClasses.subContainer}>
         <MenuWrapper>
           <MenuNav navPath="/" title="Home" />
           <MenuNav navPath="shop" title="Shop" />
           <MenuNav navPath="gallery" title="Gallery" />
-          <MenuNav navPath="shop-page" title="Blog" />
           <MenuNav navPath="contact-us" title="Contact Us" />
         </MenuWrapper>
       </section>

@@ -3,7 +3,7 @@ import cssClasses from "./shop_list_content.module.css";
 
 const ShopListContent: React.FC<{
   title: string;
-  total: string;
+  total: number;
   checkBox: ReactElement;
 }> = (props) => {
   return (

@@ -7,16 +7,16 @@ const ProductContainer: React.FC<{
   img: string;
   productName: string;
   price: string;
-  featuredProduct?: string;
-  newProduct?: string;
-  sale?: string;
+  featuredProduct?: boolean;
+  newProduct?: boolean;
+  sale?: number;
 }> = (props) => {
   let content;
 
   if (props.newProduct) {
     content = "NEW";
   } else if (props.sale) {
-    content = props.sale;
+    content = `${props.sale}%`;
   }
   return (
     <div className={cssClass.productWrapper}>
@@ -38,20 +38,21 @@ const ProductContainer: React.FC<{
               {content}
             </h2>
           )}
-          {props.featuredProduct && (
+          {props.featuredProduct ? (
             <h2
               style={{
                 backgroundColor: "#92BB00",
                 letterSpacing: "2px",
+                textTransform: "uppercase",
                 color: "white",
                 fontSize: "13px",
                 padding: "3px 5px",
                 borderRadius: "3px",
               }}
             >
-              {props.featuredProduct}
+              Featured
             </h2>
-          )}
+          ) : undefined}
         </div>
         <img src={props.img} alt={props.img} />
         <button className={cssClass.addToCardBtn}>Add To Cart</button>
@@ -83,7 +84,7 @@ const ProductContainer: React.FC<{
               {content}
             </h2>
           )}
-          {props.featuredProduct && (
+          {props.featuredProduct ? (
             <h2
               style={{
                 backgroundColor: "#92BB00",
@@ -94,9 +95,9 @@ const ProductContainer: React.FC<{
                 borderRadius: "3px",
               }}
             >
-              {props.featuredProduct}
+              Featured
             </h2>
-          )}
+          ) : undefined}
         </div>
         <img src={props.img} alt={props.img} />
         <section className={cssClass.subSelectOption}>

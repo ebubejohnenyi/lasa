@@ -99,7 +99,6 @@
 .shopCardSwiper{
   height: 40vh;
   width: 100%;
-  margin: 8rem 0;
 }
 .shopCardSwiper .swiper-slide {
   /* Center slide text vertically */
@@ -108,18 +107,19 @@
   align-items: center;
   padding: 0;
 }
-.productCustomSwiper .swiper-button-prev {
-  position: absolute;
-  left: 0;
+.shopCardSwiper .swiper-button-prev {
+  background-color: transparent;
+  width: 20px;
 }
-.productCustomSwiper .swiper-button-next {
-  position: absolute;
-  right: 0;
+.shopCardSwiper .swiper-button-next {
+  width: 20px;
+  background-color: transparent;
 }
 
 .shopCardSwiper .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 25px;
+  width: 20px;
+  font-size: 20px;
   color: grey;
 }
 
@@ -130,14 +130,16 @@
     display: none;
   }
   .customSwiper {
-    height: 90vh;
+    padding-top: 40%;
+    height: fit-content;
     width: 100%;
-    padding: 20px 30px;
+    background-color: #F7F7F7;
   }
   .productCustomSwiper{
     display: none;
   }
   .shopCardSwiper{
+    height: 30vh;
     margin: 8rem 0 0 0;
   }
 }
@@ -147,7 +149,7 @@
     height: 35%;
     width: 100%;
     padding: 0px 30px;
-    margin-top: 20%;
+    margin-top: 25%;
   }
   .productCustomSwiper{
     display: block;
@@ -171,7 +173,6 @@
     padding: 0px 15px;
   }
    .shopCardSwiper{
-    background-color: blue;
     padding: 100px;
    }
 }

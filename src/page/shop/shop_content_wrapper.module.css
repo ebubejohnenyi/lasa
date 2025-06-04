@@ -79,6 +79,43 @@
     color: white;
 }
 
+.productSize{
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.182);
+    border: none;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+.productSize:hover{
+    background-color: #C10000;
+    color: white;
+}
+.counterWrapper{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    padding: 0 1rem;
+    position: relative;
+}
+.countClass{
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.778);
+    font-size: 14px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    border-radius: 50px;
+}
+
 @media screen and (max-width: 480px){
     .wrapper{
         display: grid;

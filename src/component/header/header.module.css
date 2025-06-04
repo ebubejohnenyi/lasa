@@ -1,23 +1,10 @@
 .container{
-    height: 100px;
-    padding: 15px 70px;
+    height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 21.5%;
 }
-.mobileMenu{
-    display: none;
-    padding: 30px 30px;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70dvw;
-    height: 100dvh;
-    background-color: white;
-    z-index: 10;
-}
+
 .searchContainer{
     display: flex;
     align-items: center;
@@ -56,47 +43,48 @@
     align-items: center;
     margin: 10px 0px;
 }
-.overlayContainer{
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100dvw;
-    z-index: 2;
-    height: 100dvh;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.counterWrapper{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    padding: 0 1rem;
+    position: relative;
 }
+.counterWrapper span{
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: #CC0000;
+    font-size: 14px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    border-radius: 50px;
+} 
 
 @media screen and (max-width: 480px){
     .headerContainer{
         display: block;
         width: 100vw;
-        height: 60px;
+        background-color: white;
+        padding: 0.5rem 0;
+        height: fit-content;
         position: fixed;
         top: 0;
         z-index: 10;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     .container{
-        padding: 15px;
+        padding: 1rem;
         position: relative;
     }
-    .mobileMenu{
-       display: block;
-       position: fixed;
-       z-index: 1000;
-    }
-    .mobileMenu ul{
-        background-color: transparent;
-        list-style-type: none;
-    }
-    .mobileMenu li{
-        margin: 25px 0px;
-        font-weight: 700;
-        font-size: 20px;
-        background-color: transparent;
-    }
+    
     .navMenu{
         display: block;
         width: 30px;
@@ -138,11 +126,7 @@
         z-index: 10;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .mobileMenu{
-        display: block;
-        position: fixed;
-        z-index: 1000;
-     }
+    
     .container{
         padding: 15px;
     }
@@ -175,16 +159,7 @@
     .searchContainer{
         display: none;
     } 
-    .mobileMenu ul{
-        background-color: transparent;
-        list-style-type: none;
-    }
-    .mobileMenu li{
-        margin: 25px 0px;
-        font-weight: 700;
-        font-size: 20px;
-        background-color: transparent;
-    }
+    
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px){
@@ -197,11 +172,7 @@
         z-index: 10;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .mobileMenu{
-        display: block;
-        position: fixed;
-        z-index: 1000;
-     }
+    
     .container{
         padding: 15px;
     }
@@ -234,16 +205,7 @@
     .searchContainer{
         display: none;
     } 
-    .mobileMenu ul{
-        background-color: transparent;
-        list-style-type: none;
-    }
-    .mobileMenu li{
-        margin: 25px 0px;
-        font-weight: 700;
-        font-size: 20px;
-        background-color: transparent;
-    }
+    
 }
 @media screen and (min-width: 1200px){
     /* .headerContainer{

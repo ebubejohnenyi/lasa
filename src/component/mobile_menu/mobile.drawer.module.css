@@ -1,0 +1,85 @@
+.mobileMenu{
+    display: none;
+    padding: 30px 30px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70dvw;
+    height: 100dvh;
+    background-color: white;
+    z-index: 10;
+}
+.overlayContainer{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100dvw;
+    z-index: 2;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+@media screen and (max-width: 480px){
+    
+    .mobileMenu{
+       display: block;
+       position: fixed;
+       z-index: 1000;
+    }
+    .mobileMenu ul{
+        background-color: transparent;
+        list-style-type: none;
+    }
+    .mobileMenu li{
+        margin: 25px 0px;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent;
+    }
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 991.98px){
+    
+    .mobileMenu{
+        display: block;
+        position: fixed;
+        z-index: 1000;
+     }
+    
+    .mobileMenu ul{
+        background-color: transparent;
+        list-style-type: none;
+    }
+    .mobileMenu li{
+        margin: 25px 0px;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    
+    .mobileMenu{
+        display: block;
+        position: fixed;
+        z-index: 1000;
+     }
+    
+    .mobileMenu ul{
+        background-color: transparent;
+        list-style-type: none;
+    }
+    .mobileMenu li{
+        margin: 25px 0px;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent;
+    }
+}

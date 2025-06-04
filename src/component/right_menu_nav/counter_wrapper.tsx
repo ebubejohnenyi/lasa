@@ -1,12 +1,14 @@
 import { ReactNode } from "react";
-import cssClasses from "./right_menu_nav.module.css";
 
-const CounterWrapper: React.FC<{ children: ReactNode; count: string }> = (
-  props
-) => {
+const CounterWrapper: React.FC<{
+  counterWrapperClass: string;
+  customClass?: string;
+  children: ReactNode;
+  count: number;
+}> = (props) => {
   return (
-    <div className={cssClasses.counterWrapper}>
-      <span>{props.count}</span>
+    <div className={props.counterWrapperClass}>
+      <span className={props.customClass}>{props.count}</span>
       {props.children}
     </div>
   );

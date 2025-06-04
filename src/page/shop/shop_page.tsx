@@ -7,7 +7,6 @@ import four from "../../assets/png/7.png";
 import five from "../../assets/png/9.png";
 import six from "../../assets/png/6.png";
 
-// import ShopRoundCardWrapper from "../../component/shop_round_card_category/shop_round_card_wrapper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import ShopContentWrapper from "./shop_content_wrapper";
@@ -24,9 +23,9 @@ const ShopPage: React.FC = () => {
         modules={[Navigation]}
         className="shopCardSwiper"
         breakpoints={{
-          320: { slidesPerView: 2, spaceBetween: 5 },
-          375: { slidesPerView: 2, spaceBetween: 5 },
-          414: { slidesPerView: 2, spaceBetween: 5 },
+          320: { slidesPerView: 3, spaceBetween: 5 },
+          375: { slidesPerView: 3, spaceBetween: 5 },
+          414: { slidesPerView: 3, spaceBetween: 5 },
           480: { slidesPerView: 2, spaceBetween: 5 },
           640: { slidesPerView: 2, spaceBetween: 5 },
           768: { slidesPerView: 3, spaceBetween: 10 },
