@@ -34,7 +34,7 @@ const ShopContentWrapper: React.FC = () => {
                   sale={product.discount}
                   newProduct={product.new}
                   addToCart={() => handleAddToCart(product)}
-                  linkTo={product.id}
+                  linkTo={`${product.id}`}
                 />
               ))}
             </div>
