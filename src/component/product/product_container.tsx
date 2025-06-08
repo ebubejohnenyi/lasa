@@ -13,7 +13,7 @@ const ProductContainer: React.FC<{
   newProduct?: boolean;
   sale?: number;
   addToCart?: MouseEventHandler;
-  linkTo?: number;
+  linkTo?: string;
 }> = (props) => {
   let content;
 

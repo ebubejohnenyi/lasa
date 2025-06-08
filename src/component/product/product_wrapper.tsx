@@ -73,6 +73,7 @@ const ProductWrapper: React.FC<{
               newProduct={product.new}
               sale={product.discount}
               addToCart={() => handleAddToCart(product)}
+              linkTo={`shop/${product.id}`}
             />
           </SwiperSlide>
         ))}
@@ -89,6 +90,8 @@ const ProductWrapper: React.FC<{
             featuredProduct={product.featured}
             newProduct={product.new}
             sale={product.discount}
+            addToCart={() => handleAddToCart(product)}
+            linkTo={`shop/${product.id}`}
           />
         ))}
       </div>
