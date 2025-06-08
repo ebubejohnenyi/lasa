@@ -3,11 +3,9 @@ import { Outlet } from "react-router-dom";
 
 const ShopRoot: React.FC = () => {
   return (
-    <>
-      <main>
-        <Outlet />
-      </main>
-    </>
+    <div>
+      <Outlet />
+    </div>
   );
 };
 

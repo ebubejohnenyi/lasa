@@ -15,7 +15,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootNavigation />,
     children: [
-      { index: true, element: <Home /> },
+      {
+        index: true,
+        element: <Home />,
+      },
       {
         path: "shop",
         element: <ShopRoot />,
@@ -29,6 +32,11 @@ const router = createBrowserRouter([
             id: "product-detail",
             loader: productDetailsLoader,
             element: <ProductDetail />,
+            errorElement: (
+              <div>
+                <h1>Error Occurred! Product Not Found</h1>
+              </div>
+            ),
           },
         ],
       },

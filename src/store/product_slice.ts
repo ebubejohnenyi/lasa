@@ -9,8 +9,18 @@ const productSlice = createSlice({
   reducers: {
     addToCart(state, action: { payload: Product }) {
       const newProduct = action.payload;
-      console.log("New Product -> ", newProduct);
-      state.products.push(newProduct);
+      const foundIndex = state.products.findIndex(
+        (item) => item.id === newProduct.id
+      );
+
+      if (foundIndex !== -1) {
+        state.products[foundIndex] = {
+          ...state.products[foundIndex],
+          quantity: state.products[foundIndex].quantity + 1,
+        };
+      } else {
+        state.products.push(newProduct);
+      }
     },
   },
 });

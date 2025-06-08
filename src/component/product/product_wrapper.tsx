@@ -12,6 +12,7 @@ import { amountFormatter, Product } from "../../model/product/product.ts";
 import LoadingIcon from "../loading_icon/loading_icon.tsx";
 import { productAction } from "../../store/product_slice.ts";
 import { useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom";
 
 // function getRandomProducts(products: Product[], count: number) {
 //   return [...products].sort(() => Math.random() - 0.5).slice(0, count);
@@ -25,10 +26,15 @@ const ProductWrapper: React.FC<{
   const { data: products, isLoading, isError } = useFetch();
   // const randomProducts = getRandomProducts(products!, 5);
   const dispatch = useDispatch();
+  // const navigate = useNavigate();
 
   const handleAddToCart = (product: Product) => {
     dispatch(productAction.addToCart(product));
   };
+
+  // const handleNavigation = (product: Product) => {
+  //   navigate(`shop/${product.id}`);
+  // };
 
   return (
     <CategoryWrapper
@@ -73,7 +79,7 @@ const ProductWrapper: React.FC<{
               newProduct={product.new}
               sale={product.discount}
               addToCart={() => handleAddToCart(product)}
-              linkTo={`shop/${product.id}`}
+              onNavigate={String(product.id)}
             />
           </SwiperSlide>
         ))}
@@ -91,7 +97,7 @@ const ProductWrapper: React.FC<{
             newProduct={product.new}
             sale={product.discount}
             addToCart={() => handleAddToCart(product)}
-            linkTo={`shop/${product.id}`}
+            onNavigate={String(product.id)}
           />
         ))}
       </div>

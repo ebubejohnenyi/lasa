@@ -6,12 +6,13 @@ const HeaderNavigationContainer: React.FC<{
   title: string;
   currentPageTitle: string;
   customClassName?: string;
+  linkPath?: string;
 }> = (props) => {
   return (
     <section className={props.customClassName ?? cssClasses.container}>
       <div className={cssClasses.headerContent}>
         <h1>
-          <NavLink to="/">{props.title}</NavLink>
+          <NavLink to={props.linkPath ?? "/"}>{props.title}</NavLink>
         </h1>
         <MdOutlineKeyboardArrowRight
           size={25}

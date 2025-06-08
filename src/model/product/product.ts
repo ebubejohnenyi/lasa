@@ -32,11 +32,12 @@ export type Product = {
   price: string;
   imagePath: string;
   category: Category;
-  size?: Size;
-  featured?: boolean;
-  discount?: number;
-  new?: boolean;
+  size: Size;
+  featured: boolean;
+  discount: number;
+  new: boolean;
   rate: Rate;
+  quantity: number;
 };
 
 export function amountFormatter(amount: number) {

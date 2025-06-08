@@ -14,6 +14,7 @@ const ProductContainer: React.FC<{
   sale?: number;
   addToCart?: MouseEventHandler;
   linkTo?: string;
+  onNavigate?: string;
 }> = (props) => {
   let content;
 
@@ -64,7 +65,9 @@ const ProductContainer: React.FC<{
             Add To Cart
           </button>
           <h3>
-            <Link to={`${props.linkTo}`}>{props.productName}</Link>
+            <Link to={props.linkTo ?? `/shop/${props.onNavigate!}`}>
+              {props.productName}
+            </Link>
           </h3>
           <section className={cssClass.stars}>
             <FaStar color="brown" />

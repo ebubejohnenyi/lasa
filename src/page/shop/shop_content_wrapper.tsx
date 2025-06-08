@@ -13,7 +13,6 @@ const ShopContentWrapper: React.FC = () => {
   const dispatch = useDispatch();
 
   const handleAddToCart = (product: Product) => {
-    console.log("Click Click..");
     dispatch(productAction.addToCart(product));
   };
   return (
@@ -34,7 +33,7 @@ const ShopContentWrapper: React.FC = () => {
                   sale={product.discount}
                   newProduct={product.new}
                   addToCart={() => handleAddToCart(product)}
-                  linkTo={`${product.id}`}
+                  linkTo={String(product.id)}
                 />
               ))}
             </div>
