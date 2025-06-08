@@ -73,7 +73,7 @@ const ProductDetail: React.FC = () => {
 
 export default ProductDetail;
 
-const loader = async ({ request, params }: LoaderFunctionArgs) => {
+const loader = async ({ params }: LoaderFunctionArgs) => {
   const productId = params.id;
   const response = await fetch(
     "https://gist.githubusercontent.com/ebubejohnenyi/6c7234bc14d71bc47ad92bbea08a693d/raw/2676016d8688cbb5ebe54ad4ff18d0103cbd340b/gistfile1.txt"
