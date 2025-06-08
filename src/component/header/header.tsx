@@ -10,8 +10,12 @@ import TopRightMenuNav from "../right_menu_nav/top_right_menu_nav";
 import cssClasses from "./header.module.css";
 import logo from "../../assets/png/logo.png";
 import MobileDrawer from "../mobile_menu/mobile_drawer";
+import { useSelector, TypedUseSelectorHook } from "react-redux";
+import type { RootState } from "../../store/central_state";
 
 const Header: React.FC = () => {
+  const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
+  const products = useTypedSelector((state) => state.product.products);
   const [viewMobileMenu, setViewMobileMenu] = useState(false);
 
   function handleMobileMenuView() {
@@ -32,11 +36,11 @@ const Header: React.FC = () => {
           <CiSearch className={cssClasses.searchIcon} />
         </TextInputWrapper>
         <img src={logo} alt="Logo" />
-        <TopRightMenuNav />
+        <TopRightMenuNav totalProduct={products.length} />
         <div className={cssClasses.cartIconContainer}>
           <CounterWrapper
             counterWrapperClass={cssClasses.counterWrapper}
-            count={0}
+            count={products.length}
           >
             <IoBasketOutline className={cssClasses.cartIcon} />
           </CounterWrapper>
@@ -51,6 +55,7 @@ const Header: React.FC = () => {
           <MenuNav navPath="shop" title="Shop" />
           <MenuNav navPath="gallery" title="Gallery" />
           <MenuNav navPath="contact-us" title="Contact Us" />
+          <MenuNav navPath="product" title="Product" />
         </MenuWrapper>
       </section>
       <TextInputWrapper

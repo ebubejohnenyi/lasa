@@ -4,6 +4,11 @@ import RootNavigation from "./page/root-page/root_nav";
 import ShopPage from "./page/shop/shop_page";
 import Contact from "./page/contact-page/contact";
 import Gallery from "./page/gallery/gallery";
+import ProductDetail from "./page/product/product_detail";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "./hooks/useFetch";
+import { loader as productDetailsLoader } from "./page/product/product_detail";
+import ShopRoot from "./page/shop/shop_root";
 
 const router = createBrowserRouter([
   {
@@ -11,14 +16,33 @@ const router = createBrowserRouter([
     element: <RootNavigation />,
     children: [
       { index: true, element: <Home /> },
-      { path: "shop", element: <ShopPage /> },
+      {
+        path: "shop",
+        element: <ShopRoot />,
+        children: [
+          {
+            index: true,
+            element: <ShopPage />,
+          },
+          {
+            path: ":id",
+            id: "product-detail",
+            loader: productDetailsLoader,
+            element: <ProductDetail />,
+          },
+        ],
+      },
       { path: "gallery", element: <Gallery /> },
       { path: "contact-us", element: <Contact /> },
     ],
   },
 ]);
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 }
 
 export default App;

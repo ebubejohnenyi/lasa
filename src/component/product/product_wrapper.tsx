@@ -7,21 +7,29 @@ import { SwiperSlide } from "swiper/react";
 
 import cssClasses from "./product_wrapper.module.css";
 import * as React from "react";
-import products from "../../data/data";
 import { useFetch } from "../../hooks/useFetch.ts";
 import { amountFormatter, Product } from "../../model/product/product.ts";
+import LoadingIcon from "../loading_icon/loading_icon.tsx";
+import { productAction } from "../../store/product_slice.ts";
+import { useDispatch } from "react-redux";
 
-function getRandomProducts(products: Product[], count: number) {
-  return [...products].sort(() => Math.random() - 0.5).slice(0, count);
-}
+// function getRandomProducts(products: Product[], count: number) {
+//   return [...products].sort(() => Math.random() - 0.5).slice(0, count);
+// }
 
 const ProductWrapper: React.FC<{
   title?: string;
   nav1?: string;
   nav2?: string;
 }> = (props) => {
-  const listOfProduct = useFetch(products);
-  const randomProducts = getRandomProducts(listOfProduct, 5);
+  const { data: products, isLoading, isError } = useFetch();
+  // const randomProducts = getRandomProducts(products!, 5);
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product: Product) => {
+    dispatch(productAction.addToCart(product));
+  };
+
   return (
     <CategoryWrapper
       title={props.title}
@@ -54,7 +62,7 @@ const ProductWrapper: React.FC<{
           3840: { slidesPerView: 6, spaceBetween: 40 },
         }}
       >
-        {randomProducts.slice(0, 6).map((product) => (
+        {products?.slice(0, 6).map((product) => (
           <SwiperSlide>
             <ProductContainer
               key={product.id}
@@ -64,12 +72,15 @@ const ProductWrapper: React.FC<{
               featuredProduct={product.featured}
               newProduct={product.new}
               sale={product.discount}
+              addToCart={() => handleAddToCart(product)}
             />
           </SwiperSlide>
         ))}
       </Swiper>
       <div className={cssClasses.trendingWrapper}>
-        {randomProducts.map((product) => (
+        {isError && <p>Error Occurred Fetching Data!!!</p>}
+        {isLoading && <LoadingIcon />}
+        {products?.map((product) => (
           <ProductContainer
             key={product.id}
             img={product.imagePath}

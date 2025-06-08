@@ -4,18 +4,24 @@
     width: 320px;
     height: 560px;
 }
-.productWrapper .hoverViewContainer{
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.3s ease;
+.overWrapper{
+    position: relative;
+    width: 100%;
 }
-.productWrapper .container{
-    opacity: 1;
+.hoverViewContainer{
+    display: none;
     position: absolute;
-    transition: opacity 0.3s ease;
-    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    transition: 0.3s ease;
+}
+.overWrapper:hover .hoverViewContainer{
+    display: block;
 }
 .productWrapper .overlayView{
+    pointer-events: none;
     background-color: rgba(0, 0, 0, 0.177);
     position: absolute;
     height: 450px;
@@ -120,6 +126,10 @@
     object-fit: cover;
     margin-bottom: 10px;
 }
+.container h3 a{
+    text-decoration: none;
+    color: rgb(49, 64, 26);
+}
 .container h3{
     color: rgb(49, 64, 26);
     cursor: pointer;
@@ -147,6 +157,12 @@
         width: 45dvw;
         height: 340px;
     }
+    .hoverViewContainer img{
+        display: none;
+    }
+    .productWrapper .overlayView{
+        display: none;
+    }
     .container img{
         width: 45dvw;
         height: 200px;
@@ -154,8 +170,8 @@
     .subSelectOption{
         display: none;
     }
-    .hoverViewContainer:hover{
-        opacity: 0;
+    .hoverViewContainer{
+        display: none;
     }
     .container h3{
         font-size: 15px;
@@ -182,6 +198,7 @@
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 5px;
+        z-index: 100;
     }
 } 
 @media screen and (min-width: 481px) and (max-width: 991.98px) {
@@ -200,6 +217,7 @@
     }
     .productWrapper .overlayView{
         height: 40dvh;
+        pointer-events: none;
     }
 }
 
@@ -217,6 +235,7 @@
         height: 40dvh;
     }
     .productWrapper .overlayView{
+        pointer-events: none;
         height: 40dvh;
     }
 } 

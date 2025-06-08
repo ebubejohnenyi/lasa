@@ -5,7 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import CounterWrapper from "./counter_wrapper";
 
-const TopRightMenuNav = () => {
+const TopRightMenuNav: React.FC<{ totalProduct: number }> = (props) => {
   return (
     <section className={cssClasses.container}>
       <div style={{ display: "flex", alignItems: "center" }}>
@@ -22,7 +22,7 @@ const TopRightMenuNav = () => {
         </CounterWrapper>
         <CounterWrapper
           counterWrapperClass={cssClasses.counterWrapper}
-          count={0}
+          count={props.totalProduct}
         >
           <FiShoppingCart className={cssClasses.icon} />
         </CounterWrapper>

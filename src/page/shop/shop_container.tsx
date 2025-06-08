@@ -3,14 +3,15 @@ import cssClasses from "./shop_container.module.css";
 import { IoIosArrowDown } from "react-icons/io";
 
 import { useFetch } from "../../hooks/useFetch";
-import products from "../../data/data";
+import LoadingIcon from "../../component/loading_icon/loading_icon.tsx";
 
 const ShopContainer: React.FC<{ children: ReactNode }> = (props) => {
-  const listOfProduct = useFetch(products);
+  const { data: products, isLoading } = useFetch();
   return (
     <div>
       <div className={cssClasses.shopContainer}>
-        <h1>Showing 1-14 of {listOfProduct.length} results</h1>
+        {isLoading && <LoadingIcon />}
+        {products && <h1>Showing 1-14 of {products?.length} results</h1>}
         <div className={cssClasses.sortWrapper}>
           <h1>Sort by:</h1>
           <div className={cssClasses.sortContainer}>

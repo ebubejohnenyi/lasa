@@ -1,0 +1,435 @@
+.container{
+    background-image: url('../../assets/jpg/couch5.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.container a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.71);
+    background-color: transparent;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.container a:hover{
+    color: red;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+.firstPoint h2{
+    width: fit-content;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.firstPoint p{
+    width: fit-content;
+    margin: 15px 0px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #C10000;
+}
+.stars{
+    width: fit-content;
+    display: flex; 
+    align-items: center; 
+    margin: 15px 0px;
+}
+.firstPoint article{
+    color: grey;
+    font-size: 1.2rem;
+}
+.secondPoint{
+    background-color: rgba(128, 128, 128, 0.055);
+    border-radius: 5px;
+    padding: 2rem 7rem 2rem 2rem;
+    height: fit-content;
+    width: fit-content;
+    margin: 1rem 0;
+}
+.secondPoint > div{
+    display: flex;
+    background-color: transparent;
+    gap: 1rem;
+}
+.secondPoint .increase_decrease{
+    background-color: white;
+    color: black;
+    width: 35%;
+    padding: 1rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.secondPoint .addToCart{
+    border: 2px solid #C10000;
+    border-radius: 50px;
+    padding: 0.5rem 4rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-wrap: nowrap;
+    width: fit-content;
+    color: #C10000;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.4s all;
+    text-transform: uppercase;
+}
+.secondPoint .buyNow{
+    text-wrap: nowrap;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 4rem;
+    font-size: 1rem;
+    font-weight: 700;
+    width: fit-content;
+    color: white;
+    cursor: pointer;
+    background-color: #C10000;
+    transition: 0.4s all;
+    text-transform: uppercase;
+}
+.secondPoint .addToCart:hover{
+    background-color: #C10000;
+    color: white;
+}
+.secondPoint .addToWishlist{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    width: fit-content;
+}
+.secondPoint .addToWishlist button{
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.secondPoint .addToWishlist .iconHeart{
+    background-color: transparent;
+    width: 20;
+    height: 20;
+    color: grey;
+}
+.secondPoint .addToWishlist:hover button{
+    color: #C10000;
+}
+.secondPoint .addToWishlist:hover .iconHeart{
+    color: #C10000;
+}
+.sizeDeliveryQuestion p{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+.sizeDeliveryQuestion p:hover{
+    color: #C10000;
+}
+.sizeDeliveryQuestion p .icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: grey;
+    background-color: transparent;
+}
+.detailsWrapper{
+    width: fit-content;
+}
+.detailsWrapper p{
+    width: fit-content;
+    font-size: 1.1rem;
+    margin: 0.9rem 0;
+}
+.detailsWrapper p span{
+    color: grey;
+    cursor: pointer;
+}
+.detailsWrapper p span:hover{
+    color: #C10000;
+}
+.socialMediaIconsWrapper{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: fit-content;
+}
+.socialMediaIcons{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+.checkOutWrapper{
+    background-color: transparent;
+    border: 1px solid #CB0000;
+    width: fit-content;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+.checkOutWrapper h3{
+    background-color: #CB0000;
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.3rem 1rem; 
+    border-radius: 2px;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.checkOutWrapper .payCards{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 1rem 0;
+}
+.checkOutWrapper .payCards .payCardsIcon{
+    width: 4rem;
+    height: 4rem;
+}
+.checkOutWrapper .worldWideWrapper{
+    background-color: #CB0000;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    width: fit-content;
+    padding: 1rem 0;
+}
+.checkOutWrapper .worldWideWrapper div{
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+.checkOutWrapper .worldWideWrapper div h2{
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.checkOutWrapper .worldWideWrapper div p{
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 90%;
+    text-align: center;
+}
+.secondWrapper{
+    width: 50%;
+    overflow: hidden;
+}
+.productImage{
+    width: 40vw; 
+    height: 95vh; 
+    object-fit: cover;
+}
+.mobileViewAddButtons{
+    display: none;
+}
+@media screen and (max-width: 480px){
+    .container{
+        display: none;
+    }
+    .wrapper{
+        display: block;
+        gap: 0;
+        margin: 2rem 0;
+        position: relative;
+    }
+    .secondWrapper{
+        width: 95%;
+        padding: 0 3%;
+    }
+    .productImage{
+        width: 95%;
+        margin: 0 2%;
+    }
+    .secondPoint{
+        width: 100vw;
+    }
+    .secondPoint > div{
+        display: block;
+    }
+    .secondPoint .increase_decrease{
+        width: 80%;
+    }
+    .secondPoint .addToCart{
+        display: none;
+    }
+    .secondPoint .buyNow{
+        display: none;
+    }
+    .secondPoint .addToWishlist{
+        display: none;
+    }
+    .sizeDeliveryQuestion p{
+        width: fit-content;
+        margin: 1rem 0 0 0;
+    }
+    .checkOutWrapper{
+        width: 92vw;
+    }
+    .checkOutWrapper .payCards .payCardsIcon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .checkOutWrapper .worldWideWrapper{
+        display: block;
+        width: 100%;
+    }
+    .checkOutWrapper .worldWideWrapper div{
+        margin: 1rem 0;
+    }
+    .checkOutWrapper .payCards{
+        padding: 2rem 0 1rem 0;
+    }
+    .checkOutWrapper h3{
+        font-size: 0.7rem;
+    }
+    .firstPoint h2{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+    .mobileViewAddButtons .addToCart{
+        border: 2px solid #C10000;
+        border-radius: 50px;
+        padding: 4% 13%;
+        font-size: 0.5rem;
+        text-wrap: nowrap;
+        font-weight: 700;
+        width: fit-content;
+        color: #C10000;
+        cursor: pointer;
+        background-color: white;
+        transition: 0.4s all;
+        text-transform: uppercase;
+    }
+    .mobileViewAddButtons{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 1rem;
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+        left: 50%;
+        /* background-color: red; */
+        width: 100%;
+        height: 8%;
+        transform: translateX(-50%);
+    }
+    .mobileViewAddButtons .buyNow{
+        border: none;
+        border-radius: 50px;
+        text-wrap: nowrap;
+        padding: 4% 13%;
+        font-size: 0.5rem;
+        font-weight: 700;
+        width: fit-content;
+        color: white;
+        cursor: pointer;
+        background-color: #C10000;
+        transition: 0.4s all;
+        text-transform: uppercase;
+    }
+    .mobileViewAddButtons .addToCart:hover{
+        background-color: #C10000;
+        color: white;
+    }
+    .mobileViewAddButtons .iconHeart{
+        background-color: transparent;
+        width: 40;
+        height: 40;
+        color: grey;
+    }
+}
+@media screen and  (min-width: 481px) and (max-width: 991.98px) {
+    .container{
+        display: none;
+    }
+    .wrapper{
+        display: block;
+        gap: 0;
+        margin: 2rem 0;
+    }
+    .secondWrapper{
+        width: 95%;
+        padding: 0 3%;
+    }
+    .productImage{
+        width: 95%;
+        margin: 0 2%;
+    }
+    .secondPoint{
+        width: 100vw;
+    }
+    .sizeDeliveryQuestion p{
+        width: fit-content;
+        margin: 1rem 0 0 0;
+    }
+    .checkOutWrapper{
+        width: 92vw;
+    }
+    .checkOutWrapper .payCards .payCardsIcon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .checkOutWrapper .worldWideWrapper{
+        display: block;
+        width: 100%;
+    }
+    .checkOutWrapper .worldWideWrapper div{
+        margin: 1rem 0;
+    }
+    .checkOutWrapper .payCards{
+        padding: 2rem 0 1rem 0;
+    }
+    .checkOutWrapper h3{
+        font-size: 0.7rem;
+    }
+    .firstPoint h2{
+        font-size: 2rem;
+        margin: 1rem 0;
+    } 
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    .secondPoint div{
+        flex-wrap: wrap;
+    }
+    .secondPoint .increase_decrease{
+        width: 40%;
+    }
+    .secondPoint .addToCart{
+        padding: 0.5rem 2rem;
+    }
+    .secondPoint .buyNow{
+        margin: 0.5rem 0;
+        padding: 0.8rem 4rem;
+    }
+     .checkOutWrapper .payCards .payCardsIcon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .secondPoint .increase_decrease{
+        width: 10vw;
+    }
+    .secondPoint{
+        padding: 1rem;
+    }
+}

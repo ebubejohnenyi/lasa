@@ -1,4 +1,3 @@
-import products from "../../data/data";
 import { useCategory } from "../../hooks/useCategory";
 import { Category, Size } from "../../model/product/product";
 import AdsBlock from "../ads_block/ads_block";
@@ -8,25 +7,24 @@ import ShopContentSideWrapper from "../shop_side_content_wrapper/shop_content_si
 import ShopListContent from "../shop_side_content_wrapper/shop_list_content";
 import cssClasses from "../../page/shop/shop_content_wrapper.module.css";
 import { useSize } from "../../hooks/useSize";
+import { useFetch } from "../../hooks/useFetch";
 
 const SideMenu: React.FC = () => {
-  const diningCategory = useCategory(products, Category.Dining_Chair);
-  const loungeCategory = useCategory(products, Category.Lounge_Chair);
-  const barStoolCategory = useCategory(products, Category.Bar_Stool);
-  const coffeeTableCategory = useCategory(products, Category.Coffee_Table);
-  const floorLampCategory = useCategory(products, Category.Floor_Lamp);
-  const hookAndCoatCategory = useCategory(
-    products,
-    Category.Hook_And_Coat_Stand
-  );
-  const pendantLightCategory = useCategory(products, Category.Pendant_Light);
-  const sofaCategory = useCategory(products, Category.Sofa);
-  const wallPaperCategory = useCategory(products, Category.Wallpaper);
+  const { data: products } = useFetch();
+  const diningCategory = useCategory(products!, Category.DiningChair);
+  const loungeCategory = useCategory(products!, Category.LoungeChair);
+  const barStoolCategory = useCategory(products!, Category.BarStool);
+  const coffeeTableCategory = useCategory(products!, Category.CoffeeTable);
+  const floorLampCategory = useCategory(products!, Category.FloorLamp);
+  const hookAndCoatCategory = useCategory(products!, Category.HookAndCoatStand);
+  const pendantLightCategory = useCategory(products!, Category.PendantLight);
+  const sofaCategory = useCategory(products!, Category.Sofa);
+  const wallPaperCategory = useCategory(products!, Category.Wallpaper);
 
-  const smallSize = useSize(products, Size.S);
-  const mediumSize = useSize(products, Size.M);
-  const largeSize = useSize(products, Size.L);
-  const extraLargeSize = useSize(products, Size.XL);
+  const smallSize = useSize(products!, Size.S);
+  const mediumSize = useSize(products!, Size.M);
+  const largeSize = useSize(products!, Size.L);
+  const extraLargeSize = useSize(products!, Size.XL);
 
   return (
     <section className={cssClasses.sideContent}>

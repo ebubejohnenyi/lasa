@@ -1,20 +1,20 @@
 export enum Category {
-  Dining_Chair,
-  Lounge_Chair,
-  Sofa,
-  Bar_Stool,
-  Coffee_Table,
-  Pendant_Light,
-  Floor_Lamp,
-  Hook_And_Coat_Stand,
-  Wallpaper,
+  DiningChair = "Dining Chair",
+  LoungeChair = "Lounge Chair",
+  Sofa = "Sofa",
+  BarStool = "Bar Stool",
+  CoffeeTable = "Coffee Table",
+  PendantLight = "Pendant Light",
+  FloorLamp = "Floor Lamp",
+  HookAndCoatStand = "Hook And Coat Stand",
+  Wallpaper = "Wallpaper",
 }
 
 export enum Size {
-  S,
-  L,
-  M,
-  XL,
+  S = "S",
+  L = "L",
+  M = "M",
+  XL = "XL",
 }
 
 export enum Rate {
@@ -28,6 +28,7 @@ export enum Rate {
 export type Product = {
   id: number;
   name: string;
+  description: string;
   price: string;
   imagePath: string;
   category: Category;
