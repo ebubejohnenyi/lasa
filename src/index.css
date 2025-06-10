@@ -14,6 +14,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 .customSwiper {
   width: 95%;
   height: 75dvh;
@@ -141,6 +142,9 @@
   .shopCardSwiper{
     height: 30vh;
     margin: 8rem 0 0 0;
+  }
+  .toastContainer{
+    top: 8%;
   }
 }
 

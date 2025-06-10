@@ -1,5 +1,5 @@
-import ProductContainer from "../../component/product/product_container";
-import cssClasses from "./shop_content_wrapper.module.css";
+import ProductContainer from "../../component/product/product_container.tsx";
+import cssClasses from "./shop_items.module.css";
 
 import { useFetch } from "../../hooks/useFetch.ts";
 import { amountFormatter, Product } from "../../model/product/product.ts";
@@ -7,13 +7,28 @@ import SideMenu from "../../component/side_menu/side_menu.tsx";
 import LoadingIcon from "../../component/loading_icon/loading_icon.tsx";
 import { useDispatch } from "react-redux";
 import { productAction } from "../../store/product_slice.ts";
+import { toast } from "react-toastify";
 
-const ShopContentWrapper: React.FC = () => {
+const ShopItems: React.FC = () => {
   const { data: products, isLoading } = useFetch();
   const dispatch = useDispatch();
 
   const handleAddToCart = (product: Product) => {
     dispatch(productAction.addToCart(product));
+    toast("Item successfully added to cart!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+      icon: (
+        <span role="img" aria-label="checkmark">
+          ✅
+        </span>
+      ),
+    });
   };
   return (
     <>
@@ -44,4 +59,4 @@ const ShopContentWrapper: React.FC = () => {
   );
 };
 
-export default ShopContentWrapper;
+export default ShopItems;

@@ -1,0 +1,154 @@
+.modalContainer{
+    height: fit-content;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    position: fixed;
+    top: 7%;
+    left: auto;
+    right: 1%;
+    margin: 0 !important;
+}
+.closeCheckBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.closeCheckBtn .closeBtn{
+    border: 2px solid #C10000;
+    border-radius: 50px;
+    padding: 1rem 4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+    width: fit-content;
+    color: #C10000;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.4s all;
+    text-transform: uppercase;
+}
+.closeCheckBtn .checkOutBtn{
+    text-wrap: nowrap;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 4rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    width: fit-content;
+    color: white;
+    cursor: pointer;
+    background-color: #C10000;
+    transition: 0.4s all;
+    text-transform: uppercase;
+}
+.closeCheckBtn .closeBtn:hover{
+    background-color: #C10000;
+    color: white;
+}
+.increase_decrease_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.increase_decrease{
+    background-color: white;
+    color: black;
+    width: 7dvw;
+    padding: 0.5rem 0.7rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+.binContainer{
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 18vw;
+}
+.binContainer > div p{
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+.imgContainer{
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+}
+.imgContainer img{
+    width: 6vw;
+    height: 12vh;
+    object-fit: cover;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    padding:  0 0.5rem;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.215);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.215);
+    margin: 1rem 0;
+}
+.price{
+    font-size: 1.1rem;
+    color: #C10000;
+    font-weight: 700;
+}
+.scroller{
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1rem 0;
+}
+.subTotal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+.subTotal h3{
+    font-size: 1.4rem;
+    color: #C10000;
+}
+.subTotal p{
+    font-size: 1.4rem;
+}
+.free{
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 500;
+}
+.free strong span{
+    color: #C10000;
+}
+
+.trash{
+    cursor: pointer;
+    color: grey;
+}
+.trash:hover{
+    color: #C10000;
+}
+
+@media screen and (max-width: 480px){
+    .modalContainer{
+        display: none;
+    }
+}
+@media screen and  (min-width: 481px) and (max-width: 991.98px){
+    .modalContainer{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    .modalContainer{
+        display: none;
+    }
+}

@@ -9,6 +9,8 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./hooks/useFetch";
 import { loader as productDetailsLoader } from "./page/product/product_detail";
 import ShopRoot from "./page/shop/shop_root";
+import { ToastContainer } from "react-toastify";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -47,9 +49,24 @@ const router = createBrowserRouter([
 ]);
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
+    <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        style={{ zIndex: 9999, backgroundColor: "transparent" }}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        className={"toastContainer"}
+      />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </>
   );
 }
 

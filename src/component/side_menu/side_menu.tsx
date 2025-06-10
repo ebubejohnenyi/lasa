@@ -5,7 +5,7 @@ import FilledButton from "../button/filledButton";
 import CounterWrapper from "../right_menu_nav/counter_wrapper";
 import ShopContentSideWrapper from "../shop_side_content_wrapper/shop_content_side_wrapper";
 import ShopListContent from "../shop_side_content_wrapper/shop_list_content";
-import cssClasses from "../../page/shop/shop_content_wrapper.module.css";
+import cssClasses from "../../page/shop/shop_items.module.css";
 import { useSize } from "../../hooks/useSize";
 import { useFetch } from "../../hooks/useFetch";
 

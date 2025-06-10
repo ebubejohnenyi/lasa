@@ -9,7 +9,7 @@ import six from "../../assets/png/6.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import ShopContentWrapper from "./shop_content_wrapper";
+import ShopItems from "./shop_items";
 import ShopContainer from "./shop_container";
 
 const ShopPage: React.FC = () => {
@@ -59,7 +59,7 @@ const ShopPage: React.FC = () => {
         </SwiperSlide>
       </Swiper>
       <ShopContainer>
-        <ShopContentWrapper />
+        <ShopItems />
       </ShopContainer>
     </section>
   );

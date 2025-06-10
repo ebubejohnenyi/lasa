@@ -8,6 +8,7 @@ import { productAction } from "../../store/product_slice";
 import { Product } from "../../model/product/product";
 import type { RootState } from "../../store/central_state";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const ProductSecondPoint: React.FC<{ size: string; product: Product }> = (
   props
@@ -24,6 +25,20 @@ const ProductSecondPoint: React.FC<{ size: string; product: Product }> = (
 
   const handleAddToCart = (product: Product) => {
     dispatch(productAction.addToCart(product));
+    toast("Item successfully added to cart!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+      icon: (
+        <span role="img" aria-label="checkmark">
+          ✅
+        </span>
+      ),
+    });
   };
 
   return (
