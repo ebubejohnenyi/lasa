@@ -12,6 +12,7 @@ import logo from "../../assets/png/logo.png";
 import MobileDrawer from "../mobile_menu/mobile_drawer";
 import { useSelector, TypedUseSelectorHook } from "react-redux";
 import type { RootState } from "../../store/central_state";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
@@ -42,7 +43,9 @@ const Header: React.FC = () => {
             counterWrapperClass={cssClasses.counterWrapper}
             count={products.length}
           >
-            <IoBasketOutline className={cssClasses.cartIcon} />
+            <Link to="/cart">
+              <IoBasketOutline className={cssClasses.cartIcon} />
+            </Link>
           </CounterWrapper>
         </div>
       </section>

@@ -1,0 +1,11 @@
+.emptyCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0 1rem 0;
+    height: 50vh;
+    flex-direction: column;
+}
+.mobileCartContainer{
+    padding-top: 35%;
+}

@@ -109,7 +109,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
 }
 .subTotal h3{
     font-size: 1.4rem;
@@ -139,6 +139,26 @@
 @media screen and (max-width: 480px){
     .modalContainer{
         display: none;
+    }
+    .imgContainer img{
+        width: 25vw;
+        height: 15vh;
+    }
+    .binContainer{
+        width: 70%;
+        padding: 1rem 0.5rem;
+    }
+    .increase_decrease{
+        width: 30vw;
+    }
+    .closeCheckBtn{
+        gap: 10%;
+    }
+    .closeCheckBtn .closeBtn{
+        padding: 1rem 3rem;
+    }
+    .closeCheckBtn .checkOutBtn{
+        padding: 1rem 2rem;
     }
 }
 @media screen and  (min-width: 481px) and (max-width: 991.98px){

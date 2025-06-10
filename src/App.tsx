@@ -11,6 +11,8 @@ import { loader as productDetailsLoader } from "./page/product/product_detail";
 import ShopRoot from "./page/shop/shop_root";
 import { ToastContainer } from "react-toastify";
 import "./index.css";
+import FeatureCategoryRoot from "./component/feature_category_root/feature_category_root";
+import MobileCart from "./page/mobile_cart/mobile_cart";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +46,12 @@ const router = createBrowserRouter([
       },
       { path: "gallery", element: <Gallery /> },
       { path: "contact-us", element: <Contact /> },
+      { path: "cart", element: <MobileCart /> },
+      {
+        path: "feature-category",
+        element: <FeatureCategoryRoot />,
+        children: [],
+      },
     ],
   },
 ]);
